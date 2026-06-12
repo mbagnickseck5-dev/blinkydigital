@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BlinkyDigital — Guides et ressources pratiques pour entrepreneurs africains qui veulent lancer et développer leur business en ligne.">
+  <meta property="og:title" content="BlinkyDigital — Ressources pour entrepreneurs africains">
+  <meta property="og:description" content="Guides pratiques pour lancer et développer ton business digital en Afrique.">
+  <title>BlinkyDigital — Ressources digitales pour entrepreneurs africains</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a1628;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0C447C 0%, #0a1628 60%);
+      padding: 60px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(55, 138, 221, 0.12);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(55, 138, 221, 0.08);
+    }
+
+    .avatar {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #378ADD, #0C447C);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; font-weight: 700;
+      margin: 0 auto 16px;
+      border: 3px solid rgba(55, 138, 221, 0.4);
+      position: relative; z-index: 1;
+    }
+
+    .brand-name {
+      font-size: 26px; font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      position: relative; z-index: 1;
+    }
+    .brand-name span { color: #378ADD; }
+
+    .brand-tagline {
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+      max-width: 320px;
+      margin: 0 auto 20px;
+      position: relative; z-index: 1;
+    }
+
+    .badge-row {
+      display: flex; gap: 8px;
+      justify-content: center; flex-wrap: wrap;
+      position: relative; z-index: 1;
+    }
+    .badge {
+      font-size: 11px; font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1px solid rgba(55, 138, 221, 0.4);
+      color: #85B7EB;
+      background: rgba(55, 138, 221, 0.08);
+    }
+
+    /* CONTENT */
+    .content {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    .section-label {
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      padding-left: 2px;
+    }
+
+    /* PRODUCT CARD */
+    .product-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(55, 138, 221, 0.25);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 12px;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.2s, background 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+    .product-card:hover {
+      transform: translateY(-2px);
+      background: rgba(55, 138, 221, 0.08);
+      border-color: rgba(55, 138, 221, 0.5);
+    }
+    .product-card.featured {
+      border-color: #378ADD;
+      background: rgba(55, 138, 221, 0.1);
+    }
+
+    .product-top {
+      display: flex; align-items: flex-start;
+      gap: 14px; margin-bottom: 10px;
+    }
+    .product-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #378ADD, #0C447C);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+    .product-info { flex: 1; }
+    .product-tag {
+      font-size: 10px; font-weight: 600;
+      color: #378ADD; text-transform: uppercase;
+      letter-spacing: 0.08em; margin-bottom: 3px;
+    }
+    .product-name {
+      font-size: 15px; font-weight: 600;
+      color: #ffffff; line-height: 1.3;
+    }
+    .product-desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+    .product-footer {
+      display: flex; align-items: center;
+      justify-content: space-between;
+    }
+    .product-price {
+      font-size: 16px; font-weight: 700;
+      color: #ffffff;
+    }
+    .product-price .old {
+      font-size: 12px; font-weight: 400;
+      color: rgba(255,255,255,0.35);
+      text-decoration: line-through;
+      margin-right: 6px;
+    }
+    .product-cta {
+      font-size: 12px; font-weight: 600;
+      background: #378ADD;
+      color: #ffffff;
+      padding: 7px 16px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .product-card:hover .product-cta {
+      background: #185FA5;
+    }
+
+    /* COMING SOON */
+    .coming-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px dashed rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      display: flex; align-items: center;
+      gap: 14px;
+    }
+    .coming-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
+    }
+    .coming-info { flex: 1; }
+    .coming-name {
+      font-size: 14px; font-weight: 500;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 2px;
+    }
+    .coming-sub {
+      font-size: 12px;
+      color: rgba(255,255,255,0.28);
+    }
+    .coming-badge {
+      font-size: 10px; font-weight: 600;
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.3);
+      padding: 4px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* ABOUT */
+    .about-block {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+    .about-text {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+    }
+    .about-text strong { color: rgba(255,255,255,0.8); }
+
+    /* SOCIAL */
+    .social-row {
+      display: flex; gap: 10px;
+      justify-content: center; flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .social-btn {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 13px; font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .social-btn:hover {
+      background: rgba(255,255,255,0.08);
+      color: #ffffff;
+      border-color: rgba(255,255,255,0.2);
+    }
+    .social-icon { font-size: 16px; }
+
+    /* FOOTER */
+    .footer {
+      text-align: center;
+      padding: 0 20px 40px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.2);
+    }
+    .footer a { color: rgba(55, 138, 221, 0.5); text-decoration: none; }
+
+    /* NOTIFY FORM */
+    .notify-form {
+      display: flex; gap: 8px; margin-top: 10px;
+    }
+    .notify-form input {
+      flex: 1;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      padding: 9px 16px;
+      font-size: 13px;
+      color: #fff;
+      outline: none;
+    }
+    .notify-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .notify-form input:focus { border-color: rgba(55,138,221,0.5); }
+    .notify-form button {
+      background: #378ADD;
+      border: none;
+      border-radius: 20px;
+      padding: 9px 18px;
+      font-size: 13px; font-weight: 600;
+      color: #fff; cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .notify-form button:hover { background: #185FA5; }
+    .notify-success {
+      display: none;
+      font-size: 13px; color: #5DCAA5;
+      margin-top: 8px; text-align: center;
+    }
+
+    @media (max-width: 400px) {
+      .brand-name { font-size: 22px; }
+      .product-name { font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="avatar">B</div>
+    <h1 class="brand-name">Blinky<span>Digital</span></h1>
+    <p class="brand-tagline">Guides et ressources pratiques pour entrepreneurs africains qui veulent lancer et développer leur business en ligne.</p>
+    <div class="badge-row">
+      <span class="badge">🌍 Afrique francophone</span>
+      <span class="badge">📦 E-commerce COD</span>
+      <span class="badge">📈 Meta Ads</span>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- PRODUITS DISPONIBLES -->
+    <p class="section-label">Disponible maintenant</p>
+
+    <a href="COLLE_TON_LIEN_CHARIOW_ICI" class="product-card featured" target="_blank">
+      <div class="product-top">
+        <div class="product-icon">📘</div>
+        <div class="product-info">
+          <p class="product-tag">E-book · PDF · 138 pages</p>
+          <p class="product-name">Lancer son premier store Shopify en Afrique</p>
+        </div>
+      </div>
+      <p class="product-desc">Le guide COD complet pour créer ton store Shopify, attirer des clients avec Meta Ads et gérer tes commandes en Afrique francophone.</p>
+      <div class="product-footer">
+        <p class="product-price"><span class="old">15 000 FCFA</span>9 900 FCFA</p>
+        <span class="product-cta">Télécharger →</span>
+      </div>
+    </a>
+
+    <!-- PROCHAINS PRODUITS -->
+    <p class="section-label" style="margin-top: 28px;">Bientôt disponibles</p>
+
+    <div class="coming-card">
+      <div class="coming-icon">🎯</div>
+      <div class="coming-info">
+        <p class="coming-name">Pack Meta Ads COD — 5 textes de pub prêts</p>
+        <p class="coming-sub">Templates publicitaires adaptés au marché africain</p>
+      </div>
+      <span class="coming-badge">Bientôt</span>
+    </div>
+
+    <div class="coming-card">
+      <div class="coming-icon">🛒</div>
+      <div class="coming-info">
+        <p class="coming-name">Template Shopify COD — Store prêt à lancer</p>
+        <p class="coming-sub">Design optimisé mobile + fiche produit convertissante</p>
+      </div>
+      <span class="coming-badge">Bientôt</span>
+    </div>
+
+    <div class="coming-card">
+      <div class="coming-icon">📊</div>
+      <div class="coming-info">
+        <p class="coming-name">Tableau de bord COD — Suivi commandes Excel</p>
+        <p class="coming-sub">Gestion commandes, taux de livraison, ROAS automatisés</p>
+      </div>
+      <span class="coming-badge">Bientôt</span>
+    </div>
+
+    <!-- NOTIFIER -->
+    <div class="about-block" style="margin-top: 28px;">
+      <p style="font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.7); margin-bottom: 6px;">🔔 Être notifié des prochains produits</p>
+      <p class="about-text">Laisse ton email — tu seras le premier informé à chaque nouveau guide ou ressource BlinkyDigital.</p>
+      <div class="notify-form">
+        <input type="email" id="email-input" placeholder="ton@email.com" />
+        <button onclick="handleNotify()">M'avertir</button>
+      </div>
+      <p class="notify-success" id="notify-success">✅ Super ! Tu seras notifié dès le prochain lancement.</p>
+    </div>
+
+    <!-- À PROPOS -->
+    <p class="section-label">À propos</p>
+    <div class="about-block">
+      <p class="about-text"><strong>BlinkyDigital</strong>, c'est une marque créée par un entrepreneur e-commerce actif sur les marchés africains francophones — Sénégal, Maroc, Côte d'Ivoire et bien d'autres.<br><br>Après avoir lancé et géré plusieurs stores Shopify avec le modèle COD, testé des centaines de campagnes Meta Ads et appris à optimiser chaque étape du cycle de vente, une évidence s'est imposée : il n'existait aucun guide sérieux, en français, vraiment adapté à la réalité du e-commerce africain.<br><br>Chaque ressource publiée sous la marque BlinkyDigital est le fruit d'une expérience réelle — pas de la théorie.</p>
+    </div>
+
+    <!-- RÉSEAUX -->
+    <p class="section-label">Retrouve-nous</p>
+    <div class="social-row">
+      <a href="LIEN_FACEBOOK" class="social-btn" target="_blank">
+        <span class="social-icon">📘</span> Facebook
+      </a>
+      <a href="LIEN_INSTAGRAM" class="social-btn" target="_blank">
+        <span class="social-icon">📸</span> Instagram
+      </a>
+      <a href="https://wa.me/TONNUM ERO" class="social-btn" target="_blank">
+        <span class="social-icon">💬</span> WhatsApp
+      </a>
+      <a href="LIEN_CHARIOW" class="social-btn" target="_blank">
+        <span class="social-icon">🛍️</span> Boutique
+      </a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p>© 2026 BlinkyDigital — Tous droits réservés</p>
+    <p style="margin-top: 4px;">Fait avec ❤️ pour les entrepreneurs africains</p>
+  </div>
+
+  <script>
+    function handleNotify() {
+      const email = document.getElementById('email-input').value;
+      if (!email || !email.includes('@')) {
+        document.getElementById('email-input').focus();
+        return;
+      }
+      document.getElementById('notify-success').style.display = 'block';
+      document.getElementById('email-input').value = '';
+    }
+  </script>
+
+</body>
+</html>
