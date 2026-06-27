@@ -198,6 +198,70 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
   *,*::before,*::after{transition:none!important;animation:none!important}
   .reveal{opacity:1;transform:none}
 }
+
+
+
+
+
+/* ── SOCIAL PROOF — PROUVIA STYLE ── */
+#sp-popup{
+  position:fixed;bottom:88px;left:16px;z-index:9999;
+  background:#ffffff;
+  border-radius:12px;
+  box-shadow:0 4px 24px rgba(0,0,0,.15),0 1px 4px rgba(0,0,0,.08);
+  padding:14px 36px 14px 14px;
+  display:flex;align-items:center;gap:12px;
+  width:290px;
+  transform:translateX(calc(-100% - 20px));
+  transition:transform .45s cubic-bezier(.34,1.56,.64,1);
+}
+#sp-popup.show{transform:translateX(0)}
+#sp-popup.hide{transform:translateX(calc(-100% - 20px));transition:transform .3s ease-in}
+/* Badge vert checkmark */
+#sp-badge{
+  width:46px;height:46px;flex-shrink:0;
+  position:relative;
+}
+#sp-badge svg{width:46px;height:46px;}
+/* Texte */
+#sp-body{flex:1;min-width:0}
+#sp-name{font-size:13px;font-weight:700;color:#111;line-height:1.3;
+  display:flex;align-items:center;gap:4px;}
+#sp-flag{font-size:14px;}
+#sp-action{font-size:12px;color:#444;line-height:1.45;margin-top:2px;}
+#sp-action b{font-weight:700;color:#111;}
+#sp-time{font-size:11px;color:#999;margin-top:3px;}
+
+/* Close */
+#sp-close{
+  position:absolute;top:10px;right:12px;
+  font-size:18px;color:#aaa;line-height:1;
+  cursor:pointer;background:none;border:none;padding:0;
+  font-family:Arial,sans-serif;
+}
+#sp-close:hover{color:#555;}
+
+
+/* Hide Chariow social proof notifications */
+.chariow-notification,
+.chariow-popup,
+.chariow-toast,
+.chariow-social-proof,
+.chariow-recent-activity,
+[class*="chariow-notif"],
+[class*="chariow-toast"],
+[class*="chariow-proof"],
+[class*="chariow-activity"],
+[class*="chariow-recent"],
+[id*="chariow-notif"],
+[id*="chariow-toast"],
+[id*="chariow-proof"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 </style>
 </head>
 <body>
@@ -289,43 +353,11 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
   </div>
 </section>
 
-<!-- PROOF BAR -->
-<div id="proof-bar">
-  <div class="wrap">
-    <div class="proof-nums reveal">
-      <div class="pn-item"><span class="pn-num">50</span><p class="pn-label">Produits validés</p></div>
-      <div class="pn-item"><span class="pn-num">5</span><p class="pn-label">Catégories été</p></div>
-      <div class="pn-item"><span class="pn-num">3+</span><p class="pn-label">Pays ciblés</p></div>
-      <div class="pn-item"><span class="pn-num">100%</span><p class="pn-label">Compatible COD</p></div>
-    </div>
+
   </div>
 </div>
 
-<!-- TÉMOIGNAGES -->
-<section id="temoignages">
-  <div class="wrap-sm">
-    <span class="ey ey-gold" style="background:var(--gold-pale);color:#9a7820;border:1px solid rgba(214,179,90,.3)">Les preuves</span>
-    <h2 class="display reveal">Ceux qui ont appliqué parlent d'eux-mêmes.</h2>
-    <p>Ces vendeurs avaient exactement le même problème que toi. Voici ce qu'ils disent.</p>
-    <div class="tgrid reveal">
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <blockquote>"J'ai choisi un des produits, j'ai lancé avec 5 000 FCFA de budget test et j'ai eu mes 3 premières commandes en 48h. Le produit était parfait pour la saison."</blockquote>
-        <div class="tauth">Ibrahima D.</div><div class="tcity">Dakar, Sénégal</div>
-      </div>
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Avant je passais des semaines à chercher sur Alibaba sans savoir si ça marcherait ici. Maintenant j'ai une base solide pour tester rapidement."</blockquote>
-        <div class="tauth">Fatou N.</div><div class="tcity">Abidjan, Côte d'Ivoire</div>
-      </div>
-      <div class="tcard">
-        <div class="stars">★★★★★</div>
-        <blockquote>"Ce qui m'a convaincu c'est que c'est fait pour nous. Les produits correspondent vraiment à ce que cherchent nos clients africains."</blockquote>
-        <div class="tauth">Moussa K.</div><div class="tcity">Douala, Cameroun</div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- OFFRE -->
 <section id="offre">
@@ -392,9 +424,7 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
         })();
         </script>
         <p class="pnote" style="margin-top:.5rem">Paiement sécurisé · Wave · Orange Money · Free Money</p>
-        <p style="text-align:center;font-size:12px;color:rgba(255,255,255,.2);margin-top:.4rem">
-          Ou <a href="https://mbagnick-seck.mymaketou.store/fr/products/50-produits-gagnants-edition-ete-afrique?preview=true" target="_blank" rel="noopener" style="color:rgba(255,255,255,.35);text-decoration:underline;">accès direct via le lien →</a>
-        </p>
+        
       </div>
     </div>
     <div class="gbar reveal">
@@ -437,7 +467,7 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
   <div class="wrap-sm">
     <h2 class="display">L'été avance vite.<br>Tes concurrents, aussi.</h2>
     <p>Chaque jour sans produit à vendre, c'est du chiffre que tu laisses à quelqu'un d'autre. La liste est prête. Il ne te reste qu'à la prendre.</p>
-    <a href="https://mbagnick-seck.mymaketou.store/fr/products/50-produits-gagnants-edition-ete-afrique?preview=true" target="_blank" rel="noopener" class="btn-dark">Oui, je veux mes 50 produits →</a>
+    <a href="#offre" class="btn-dark" onclick="document.getElementById('offre').scrollIntoView({behavior:'smooth'});return false;">Oui, je veux mes 50 produits →</a>
     <span class="cta-sub">Accès immédiat · 4 900 FCFA · Paiement Mobile Money</span>
     <div class="author-block">
       <div class="av">MS</div>
@@ -458,7 +488,7 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 <!-- STICKY BAR -->
 <div id="sbar">
   <p><strong>50 Produits Gagnants</strong> — Édition Été Afrique</p>
-  <a href="https://mbagnick-seck.mymaketou.store/fr/products/50-produits-gagnants-edition-ete-afrique?preview=true" target="_blank" rel="noopener" class="btn-gold" style="padding:11px 24px;font-size:14px">4 900 FCFA →</a>
+  <a href="#offre" onclick="openChariow();return false;" class="btn-gold" style="padding:11px 24px;font-size:14px">4 900 FCFA →</a>
 </div>
 
 <!-- WHATSAPP FLOAT -->
@@ -494,6 +524,17 @@ function toggleFaq(btn){
   if(!isOpen){ ans.classList.add('open'); btn.classList.add('open'); }
 }
 
+
+// Trigger Chariow widget
+function openChariow() {
+  var btn = document.querySelector('#chariow-widget button, #chariow-widget [role="button"], #chariow-widget .chariow-btn, #chariow-widget a');
+  if (btn) {
+    btn.click();
+  } else {
+    document.getElementById('offre').scrollIntoView({behavior:'smooth'});
+  }
+}
+
 // Countdown — 48h from session start
 (function(){
   const key = 'cd_end';
@@ -512,5 +553,276 @@ function toggleFaq(btn){
   tick();
 })();
 </script>
+
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-in">
+      <span class="ey ey-gold">Guide E-commerce · Été 2025</span>
+      
+      <h1 class="display hero-title">
+        Tu vends en ligne… mais tu ne sais pas<br>
+        <em>quoi vendre cet été ?</em>
+      </h1>
+      <p class="hero-sub">Découvre les 50 produits que les meilleurs vendeurs d'Afrique francophone utilisent pendant la saison chaude — avec la méthode pour les tester et les lancer rapidement.</p>
+      <a href="#offre" class="btn-gold">Je veux mes 50 produits →</a>
+      <p class="hero-note">Accès immédiat · PDF · Wave · Orange Money · Free Money</p>
+      <div class="hero-trust">
+        <span class="ht-item"><span>📦</span> 50 produits validés</span>
+        <span class="ht-item"><span>🛡️</span> Remboursé si insatisfait</span>
+        <span class="ht-item"><span>⚡</span> Accès instantané</span>
+        <span class="ht-item"><span>🌍</span> Fait pour l'Afrique</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLÈME -->
+<section id="probleme">
+  <div class="wrap-sm">
+    <span class="ey ey-red">Le problème</span>
+    <h2 class="display reveal">Chaque été, tu regardes les autres vendre… pendant que toi, tu cherches encore.</h2>
+    <p>Tu passes des heures sur TikTok, tu scrolles des pages Alibaba, tu regardes des vidéos YouTube… et à la fin, tu ne sais toujours pas <strong>quoi tester</strong>.</p>
+    <div class="qblock reveal">
+      "J'avais le budget, j'avais ma boutique Shopify, j'avais même appris les Facebook Ads. Mais je perdais mes journées à chercher LE produit. L'été passait, et moi j'avais encore rien lancé."
+      <cite>— Une réalité que beaucoup de vendeurs connaissent bien</cite>
+    </div>
+    <p>Ce n'est pas un manque de motivation. C'est un manque d'<strong>information fiable, adaptée à nos marchés</strong>. Les listes de produits gagnants en ligne visent l'Europe ou les USA — pas le Sénégal, pas la Côte d'Ivoire.</p>
+    <div class="pain-grid reveal">
+      <div class="pain-card"><span class="pi">❌</span><p class="pt">Tu commandes un produit "tendance" qui ne se vend pas parce que personne ne l'a validé pour nos marchés.</p></div>
+      <div class="pain-card"><span class="pi">❌</span><p class="pt">Tu perds du temps, de l'argent, et pire — tu perds confiance en toi et en le e-commerce.</p></div>
+      <div class="pain-card"><span class="pi">❌</span><p class="pt">D'autres font leurs premières ventes avec des produits simples que tu aurais pu vendre toi aussi.</p></div>
+      <div class="pain-card"><span class="pi">❌</span><p class="pt">L'été passe vite. Chaque semaine sans produit lancé, c'est du chiffre que tu laisses à un concurrent.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section id="solution">
+  <div class="wrap-sm">
+    <span class="ey ey-green">La solution</span>
+    <h2 class="display reveal">50 produits sélectionnés, testés et validés pour l'été africain.</h2>
+    <p>Cet ebook n'est pas une liste copiée-collée d'Internet. C'est une sélection construite à partir de <strong>données réelles du terrain</strong> — ce qui se vend au Sénégal, en Côte d'Ivoire, au Cameroun, pendant la saison chaude.</p>
+    <div class="sol-grid reveal">
+      <div class="sol-card"><span class="se">🌡️</span><h4>Adapté à la chaleur</h4><p>Produits pensés pour les besoins réels de l'été africain, pas pour un marché européen.</p></div>
+      <div class="sol-card"><span class="se">📦</span><h4>Compatible COD</h4><p>Chaque produit sélectionné fonctionne avec le modèle cash on delivery.</p></div>
+      <div class="sol-card"><span class="se">📊</span><h4>Avec les bons critères</h4><p>Prix, marge estimée, potentiel pub — tu sais pourquoi chaque produit est là.</p></div>
+      <div class="sol-card"><span class="se">⚡</span><h4>Applicable tout de suite</h4><p>Lis, choisis, lance ta campagne. Pas besoin de chercher pendant des semaines.</p></div>
+    </div>
+    <div class="inside-box reveal">
+      <h3>📖 Ce que tu trouves dans l'ebook</h3>
+      <ul class="ilist">
+        <li><span class="ck">✓</span> 50 fiches produits avec prix de vente recommandé et marge estimée</li>
+        <li><span class="ck">✓</span> Guide pour sourcer chaque produit sur Alibaba ou localement</li>
+        <li><span class="ck">✓</span> Conseils pour structurer ta campagne Facebook Ads de test</li>
+        <li><span class="ck">✓</span> Checklist "avant de lancer" pour éviter les erreurs classiques</li>
+        <li><span class="ck">✓</span> Produits adaptés au modèle COD dominant en Afrique francophone</li>
+        <li><span class="ck">✓</span> Accès PDF immédiat — lisible sur mobile, tablette ou ordinateur</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+  </div>
+</div>
+
+
+
+<!-- OFFRE -->
+<section id="offre">
+  <div class="wrap-sm">
+    <span class="ey ey-dark">L'offre</span>
+    <h2 class="display reveal">Voici exactement ce que tu reçois.</h2>
+    <p>Un prix de lancement, une garantie, et un accès immédiat dès aujourd'hui.</p>
+    <div class="ocard reveal">
+      <div class="oci">
+        <p class="otitle">50 Produits Gagnants — Édition Été Afrique</p>
+        <p class="price-old">Valeur réelle : 9 900 FCFA</p>
+        <div class="price-new">4 900 <sub>FCFA</sub></div>
+        <p class="price-note">Prix de lancement · Paiement unique · Aucun abonnement</p>
+
+        <div class="countdown-wrap">
+          <p class="countdown-label">Le prix augmente dans</p>
+          <div class="countdown">
+            <div class="cd-unit"><span class="cd-num" id="cd-h">00</span><span class="cd-lbl">heures</span></div>
+            <span class="cd-sep">:</span>
+            <div class="cd-unit"><span class="cd-num" id="cd-m">00</span><span class="cd-lbl">min</span></div>
+            <span class="cd-sep">:</span>
+            <div class="cd-unit"><span class="cd-num" id="cd-s">00</span><span class="cd-lbl">sec</span></div>
+          </div>
+        </div>
+
+        <ul class="olist">
+          <li><span class="ock">✓</span> 50 fiches produits avec prix, marge estimée et potentiel pub</li>
+          <li><span class="ock">✓</span> Guide sourcing Alibaba et fournisseurs locaux</li>
+          <li><span class="ock">✓</span> Stratégie Facebook Ads par catégorie de produit</li>
+          <li><span class="ock">✓</span> Checklist "avant de lancer" anti-erreurs classiques</li>
+          <li><span class="ock">✓</span> Accès PDF instantané dès confirmation du paiement</li>
+          <li><span class="ock">✓</span> Mises à jour futures incluses gratuitement</li>
+        </ul>
+
+        <div class="urg">
+          <span class="urg-ico">⏳</span>
+          <p><strong>Prix de lancement limité.</strong> Ce tarif à 4 900 FCFA est réservé aux premiers acheteurs. Il passera à 9 900 FCFA après la période de lancement — ce prix ne revient pas.</p>
+        </div>
+
+        
+        <!-- Chariow Widget -->
+        <div id="chariow-widget" 
+             data-product-id="prd_wj6gni8g"
+             data-store-domain="gfwezhrj.mychariow.market"
+             data-style="tap"
+             data-border-style="rounded"
+             data-cta-width="xs"
+             data-background-color="#FFFFFF"
+             data-cta-animation="shine"
+             data-locale="fr"
+             data-primary-color="#ffcc00"
+             style="margin-bottom:1rem;">
+        </div>
+        <script>
+        (function() {
+          var script = document.createElement('script');
+          script.src = 'https://js.chariowcdn.com/v1/widget.min.js';
+          script.async = true;
+          document.head.appendChild(script);
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
+          document.head.appendChild(link);
+        })();
+        </script>
+        <p class="pnote" style="margin-top:.5rem">Paiement sécurisé · Wave · Orange Money · Free Money</p>
+        
+      </div>
+    </div>
+    <div class="gbar reveal">
+      <span class="gico">🛡️</span>
+      <p><strong>Satisfait ou remboursé — 7 jours.</strong> Si tu lis l'ebook et qu'il ne vaut pas son prix à tes yeux, envoie-moi un message WhatsApp. Je te rembourse dans les 24h, sans question.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap-sm">
+    <span class="ey ey-green">Questions fréquentes</span>
+    <h2 class="display reveal">Tu as des questions ?</h2>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">Comment je reçois l'ebook après le paiement ? <span class="arrow">+</span></button>
+      <div class="faq-a">Dès que ton paiement est confirmé via Wave, Orange Money ou Free Money, tu reçois un lien de téléchargement immédiatement. Le PDF est téléchargeable sur mobile, tablette ou ordinateur.</div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">Ces produits marchent vraiment au Sénégal ? <span class="arrow">+</span></button>
+      <div class="faq-a">Oui. Chaque produit de la liste a été sélectionné en tenant compte des spécificités du marché sénégalais et d'Afrique francophone : pouvoir d'achat, tendances locales, compatibilité COD, et facilité de sourcing. Ce ne sont pas des listes génériques copiées de sites européens.</div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">J'ai déjà une boutique Shopify, est-ce que ça m'aide ? <span class="arrow">+</span></button>
+      <div class="faq-a">Absolument. L'ebook est fait pour les vendeurs qui ont déjà leur boutique mais ne savent pas quoi vendre. Tu trouves les produits, les prix recommandés, les marges estimées, et les conseils pour lancer tes premières campagnes Facebook Ads.</div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">Et si je ne suis pas satisfait ? <span class="arrow">+</span></button>
+      <div class="faq-a">Tu as 7 jours pour lire l'ebook. Si tu estimes qu'il ne vaut pas son prix, contacte-moi sur WhatsApp au +221 77 104 02 33 et je te rembourse dans les 24h, sans question posée. Zéro risque.</div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">C'est quoi le modèle COD mentionné dans l'ebook ? <span class="arrow">+</span></button>
+      <div class="faq-a">COD signifie "Cash On Delivery" (paiement à la livraison). C'est le modèle dominant en Afrique francophone où le client paie en espèces quand il reçoit sa commande. Tous les produits de l'ebook sont sélectionnés pour fonctionner avec ce modèle.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cta-final">
+  <div class="wrap-sm">
+    <h2 class="display">L'été avance vite.<br>Tes concurrents, aussi.</h2>
+    <p>Chaque jour sans produit à vendre, c'est du chiffre que tu laisses à quelqu'un d'autre. La liste est prête. Il ne te reste qu'à la prendre.</p>
+    <a href="#offre" class="btn-dark" onclick="document.getElementById('offre').scrollIntoView({behavior:'smooth'});return false;">Oui, je veux mes 50 produits →</a>
+    <span class="cta-sub">Accès immédiat · 4 900 FCFA · Paiement Mobile Money</span>
+    <div class="author-block">
+      <div class="av">MS</div>
+      <div class="ai">
+        <h4>Mbagnick Seck</h4>
+        <p>E-commerçant COD au Sénégal · Fondateur de Dakar Trend · Créateur de contenu e-commerce pour l'Afrique francophone</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Mbagnick Seck · Tous droits réservés</p>
+  <p style="margin-top:6px">Des questions ? <a href="https://wa.me/221771040233">WhatsApp +221 77 104 02 33</a></p>
+</footer>
+
+<!-- STICKY BAR -->
+<div id="sbar">
+  <p><strong>50 Produits Gagnants</strong> — Édition Été Afrique</p>
+  <a href="#offre" onclick="openChariow();return false;" class="btn-gold" style="padding:11px 24px;font-size:14px">4 900 FCFA →</a>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a id="wa" href="https://wa.me/221771040233" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// Sticky bar
+(function(){
+  const bar = document.getElementById('sbar');
+  const hero = document.getElementById('hero');
+  const obs = new IntersectionObserver(e => {
+    bar.classList.toggle('on', !e[0].isIntersecting);
+  }, {threshold:0});
+  obs.observe(hero);
+})();
+
+// Scroll reveal
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(e => {
+    e.forEach(en => { if(en.isIntersecting){ en.target.classList.add('show'); obs.unobserve(en.target); } });
+  }, {threshold:0.12});
+  els.forEach(el => obs.observe(el));
+})();
+
+// FAQ accordion
+function toggleFaq(btn){
+  const ans = btn.nextElementSibling;
+  const isOpen = ans.classList.contains('open');
+  document.querySelectorAll('.faq-a.open').forEach(a => { a.classList.remove('open'); a.previousElementSibling.classList.remove('open'); });
+  if(!isOpen){ ans.classList.add('open'); btn.classList.add('open'); }
+}
+
+
+// Trigger Chariow widget
+function openChariow() {
+  var btn = document.querySelector('#chariow-widget button, #chariow-widget [role="button"], #chariow-widget .chariow-btn, #chariow-widget a');
+  if (btn) {
+    btn.click();
+  } else {
+    document.getElementById('offre').scrollIntoView({behavior:'smooth'});
+  }
+}
+
+// Countdown — 48h from session start
+(function(){
+  const key = 'cd_end';
+  let end = parseInt(localStorage.getItem(key) || '0');
+  if(!end || end < Date.now()){ end = Date.now() + 48*3600*1000; localStorage.setItem(key, end); }
+  function tick(){
+    const diff = Math.max(0, end - Date.now());
+    const h = Math.floor(diff/3600000);
+    const m = Math.floor((diff%3600000)/60000);
+    const s = Math.floor((diff%60000)/1000);
+    document.getElementById('cd-h').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-m').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-s').textContent = String(s).padStart(2,'0');
+    if(diff > 0) setTimeout(tick, 1000);
+  }
+  tick();
+})();
+</script>
+
+
 </body>
 </html>
