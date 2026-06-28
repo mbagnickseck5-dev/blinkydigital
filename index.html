@@ -4,20 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Comment faire son 1er Million en Afrique — Mbagnick Seck</title>
-<meta name="description" content="La méthode terrain pour générer ta première fortune en Afrique. Sans diplôme, sans gros capital. Ebook PDF — 2 500 FCFA, accès immédiat.">
+<meta name="description" content="La méthode terrain pour générer ta première fortune en Afrique francophone. Sans diplôme, sans gros capital, sans réseau hérité. Ebook PDF — 2 500 FCFA, accès immédiat.">
+<meta property="og:title" content="Comment faire son 1er Million en Afrique — Mbagnick Seck">
+<meta property="og:description" content="La méthode terrain pour générer ta première fortune. 5 modèles validés, framework scaler, zéro bullshit. 2 500 FCFA — accès immédiat.">
+<meta property="og:type" content="product">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#1a1f3c;--navy-l:#252b4a;
-  --gold:#d6b35a;--gold-l:#e8c97a;--gold-pale:rgba(214,179,90,.12);
-  --white:#fff;--off:#f7f6f2;
+  --navy:#1a1f3c;--navy-l:#252b4a;--navy-d:#13172e;
+  --gold:#d6b35a;--gold-l:#e8c97a;--gold-pale:rgba(214,179,90,.12);--gold-pale2:rgba(214,179,90,.06);
+  --white:#fff;--off:#f7f6f2;--off2:#f0efe9;
   --t1:#1a1a2e;--t2:#5c5c7a;--t3:#9090aa;
-  --ok:#0f6e56;
-  --bd:rgba(26,31,60,.1);
+  --ok:#0f6e56;--ok-bg:#e1f5ee;
+  --red:#c0392b;--red-bg:#faece7;
+  --bd:rgba(26,31,60,.1);--bd2:rgba(26,31,60,.06);
   --sp:5rem 1.5rem;
+  --r:12px;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Inter',sans-serif;font-size:16px;color:var(--t1);background:var(--off);line-height:1.6;-webkit-font-smoothing:antialiased}
@@ -28,188 +33,232 @@ body{font-family:'Inter',sans-serif;font-size:16px;color:var(--t1);background:va
 /* EYEBROW */
 .ey{display:inline-flex;align-items:center;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:5px 14px;border-radius:20px;margin-bottom:1.25rem}
 .ey-gold{background:var(--gold-pale);color:#9a7820;border:1px solid rgba(214,179,90,.3)}
-.ey-red{background:#faece7;color:#993c1d}
-.ey-green{background:#e1f5ee;color:#0f6e56}
+.ey-red{background:var(--red-bg);color:#993c1d}
+.ey-green{background:var(--ok-bg);color:var(--ok)}
 .ey-dark{background:var(--navy);color:var(--gold)}
 
 /* BANNER */
 #banner{background:var(--gold);height:40px;overflow:hidden;display:flex;align-items:center}
-.btrack{display:flex;white-space:nowrap;animation:ticker 32s linear infinite}
+.btrack{display:flex;white-space:nowrap;animation:ticker 34s linear infinite}
 .btrack:hover{animation-play-state:paused}
 .bi{display:inline-flex;align-items:center;gap:8px;padding:0 2.5rem;font-size:13px;font-weight:700;color:var(--navy);flex-shrink:0}
 .bdot{display:inline-block;width:4px;height:4px;background:var(--navy);border-radius:50%;opacity:.35;flex-shrink:0}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* COUNTER BAR */
-#counter-bar{background:var(--navy);padding:1.25rem 1.5rem;text-align:center;border-bottom:1px solid rgba(214,179,90,.15)}
-.counter-inner{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
-.counter-pulse{width:10px;height:10px;background:#22c55e;border-radius:50%;animation:pulse 1.8s infinite;flex-shrink:0}
+#counter-bar{background:var(--navy-d);padding:1rem 1.5rem;text-align:center;border-bottom:1px solid rgba(214,179,90,.12)}
+.counter-inner{display:inline-flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center}
+.counter-pulse{width:9px;height:9px;background:#22c55e;border-radius:50%;animation:pulse 1.8s infinite;flex-shrink:0}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}50%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
-.counter-text{font-size:14px;color:rgba(255,255,255,.75);line-height:1.4}
-.counter-text strong{color:#22c55e;font-size:20px;font-weight:800;margin-right:3px}
-.counter-sub{font-size:12px;color:rgba(255,255,255,.35);margin-top:2px}
-.counter-avatars{display:flex;margin-left:4px}
-.counter-avatars span{width:26px;height:26px;border-radius:50%;border:2px solid var(--navy);background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--navy);margin-left:-8px;flex-shrink:0}
+.counter-text{font-size:14px;color:rgba(255,255,255,.7);line-height:1.4}
+.counter-text strong{color:#22c55e;font-size:19px;font-weight:800;margin-right:2px}
+.counter-sub{font-size:11px;color:rgba(255,255,255,.3);margin-top:2px}
+.counter-avatars{display:flex;margin-left:2px}
+.counter-avatars span{width:24px;height:24px;border-radius:50%;border:2px solid var(--navy-d);background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:var(--navy);margin-left:-7px;flex-shrink:0}
 .counter-avatars span:first-child{margin-left:0}
 
 /* HERO */
-#hero{background:var(--navy);color:var(--white);padding:4.5rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden}
-#hero::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(214,179,90,.13) 0%,transparent 65%);pointer-events:none}
+#hero{background:var(--navy);color:var(--white);padding:4rem 1.5rem 3.5rem;text-align:center;position:relative;overflow:hidden}
+#hero::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(214,179,90,.11) 0%,transparent 60%);pointer-events:none}
+#hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 .hero-in{position:relative;z-index:1}
-.hero-title{font-size:clamp(28px,5vw,46px);color:var(--white);margin-bottom:1.2rem}
-.hero-title em{color:var(--gold);font-style:normal;display:block}
-.hero-sub{font-size:17px;color:rgba(255,255,255,.72);max-width:520px;margin:0 auto 2rem;line-height:1.75}
-.hero-trust{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:2rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.08)}
-.ht-item{display:flex;align-items:center;gap:7px;font-size:13px;color:rgba(255,255,255,.5)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(214,179,90,.12);border:1px solid rgba(214,179,90,.25);border-radius:20px;padding:6px 16px;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:.06em;text-transform:uppercase;margin-bottom:1.5rem}
+.hero-title{font-size:clamp(30px,6vw,50px);color:var(--white);margin-bottom:1rem;letter-spacing:-.02em}
+.hero-title em{color:var(--gold);font-style:normal;display:block;font-size:clamp(34px,7vw,58px)}
+.hero-sub{font-size:17px;color:rgba(255,255,255,.68);max-width:500px;margin:0 auto 1.75rem;line-height:1.75}
+.hero-proof{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:10px 18px;margin-bottom:2rem;font-size:13px;color:rgba(255,255,255,.6)}
+.hero-proof strong{color:#22c55e}
+.hero-cta-group{display:flex;flex-direction:column;align-items:center;gap:10px}
+.hero-note{font-size:12px;color:rgba(255,255,255,.28);margin-top:4px}
+.hero-trust{display:flex;justify-content:center;gap:1.25rem;flex-wrap:wrap;margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.07)}
+.ht-item{display:flex;align-items:center;gap:6px;font-size:12px;color:rgba(255,255,255,.45);font-weight:500}
 
 /* BUTTONS */
-.btn-gold{display:inline-block;background:var(--gold);color:var(--navy);font-size:16px;font-weight:800;padding:17px 44px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:background .2s,transform .15s;font-family:'Inter',sans-serif;letter-spacing:-.01em}
-.btn-gold:hover{background:var(--gold-l);transform:translateY(-2px)}
-.btn-dark{display:inline-block;background:var(--navy);color:var(--gold);font-size:17px;font-weight:800;padding:18px 46px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:background .2s,transform .15s}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--navy);font-size:16px;font-weight:800;padding:17px 44px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;font-family:'Inter',sans-serif;letter-spacing:-.01em;box-shadow:0 4px 20px rgba(214,179,90,.3)}
+.btn-gold:hover{background:var(--gold-l);transform:translateY(-2px);box-shadow:0 8px 28px rgba(214,179,90,.4)}
+.btn-gold:active{transform:translateY(0)}
+.btn-dark{display:inline-block;background:var(--navy);color:var(--gold);font-size:17px;font-weight:800;padding:18px 46px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:background .2s,transform .15s;box-shadow:0 4px 20px rgba(26,31,60,.3)}
 .btn-dark:hover{background:var(--navy-l);transform:translateY(-2px)}
+.btn-ghost{display:inline-flex;align-items:center;gap:8px;background:transparent;color:rgba(255,255,255,.5);font-size:13px;font-weight:600;padding:10px 0;border:none;cursor:pointer;font-family:'Inter',sans-serif;text-decoration:underline;text-underline-offset:3px}
+.btn-ghost:hover{color:var(--gold)}
 
 /* PROBLEM */
 #probleme{padding:var(--sp);background:var(--white)}
-#probleme h2{font-size:clamp(22px,4vw,32px);margin-bottom:1rem}
+#probleme h2{font-size:clamp(22px,4vw,34px);margin-bottom:1rem}
 #probleme p{font-size:16px;color:var(--t2);line-height:1.8;margin-bottom:1rem}
 #probleme p strong{color:var(--t1);font-weight:700}
 .qblock{border-left:3px solid var(--gold);padding:1.1rem 1.4rem;margin:1.8rem 0;background:#fdfbf5;border-radius:0 8px 8px 0;font-style:italic;font-size:16px;color:var(--t2);line-height:1.75}
-.qblock cite{display:block;margin-top:.6rem;font-style:normal;font-size:12px;color:var(--t3);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
-.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:1.8rem}
-.pain-card{background:#fff5f5;border:1px solid rgba(153,60,29,.12);border-radius:10px;padding:1rem 1.1rem;display:flex;align-items:flex-start;gap:10px}
-.pi{font-size:18px;flex-shrink:0;margin-top:1px}
+.qblock cite{display:block;margin-top:.6rem;font-style:normal;font-size:12px;color:var(--t3);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:1.75rem}
+.pain-card{background:#fff5f5;border:1px solid rgba(153,60,29,.1);border-radius:10px;padding:.9rem 1rem;display:flex;align-items:flex-start;gap:10px}
+.pi{font-size:17px;flex-shrink:0;margin-top:2px}
 .pt{font-size:14px;color:#6b2a15;line-height:1.55}
+.pt strong{color:#4a1508;font-weight:700}
+
+/* AUTEUR */
+#auteur{padding:4rem 1.5rem;background:var(--off)}
+.auteur-card{background:var(--white);border-radius:16px;border:1px solid var(--bd);padding:2rem;display:flex;gap:2rem;align-items:flex-start}
+.auteur-avatar{width:80px;height:80px;min-width:80px;border-radius:50%;background:var(--navy);border:3px solid var(--gold);display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:800;color:var(--gold);flex-shrink:0}
+.auteur-body h3{font-size:18px;font-weight:700;color:var(--t1);margin-bottom:4px}
+.auteur-body .role{font-size:13px;color:var(--gold);font-weight:600;margin-bottom:12px}
+.auteur-body p{font-size:14px;color:var(--t2);line-height:1.7;margin-bottom:12px}
+.auteur-stats{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:8px;padding-top:12px;border-top:1px solid var(--bd)}
+.astat{text-align:center}
+.astat-n{font-size:20px;font-weight:800;color:var(--navy)}
+.astat-l{font-size:11px;color:var(--t3);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
 
 /* SOLUTION */
-#solution{padding:var(--sp);background:var(--off)}
-#solution h2{font-size:clamp(22px,4vw,32px);margin-bottom:1rem}
+#solution{padding:var(--sp);background:var(--white)}
+#solution h2{font-size:clamp(22px,4vw,34px);margin-bottom:1rem}
 #solution>.wrap-sm>p{font-size:16px;color:var(--t2);line-height:1.8;margin-bottom:1.2rem}
 #solution>.wrap-sm>p strong{color:var(--t1);font-weight:700}
-.sol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:2rem 0}
-.sol-card{background:var(--white);border-radius:12px;border:1px solid var(--bd);padding:1.25rem;transition:box-shadow .2s}
-.sol-card:hover{box-shadow:0 4px 20px rgba(26,31,60,.07)}
-.sol-card .se{font-size:26px;margin-bottom:10px;display:block}
+.sol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:1.75rem 0}
+.sol-card{background:var(--off);border-radius:12px;border:1px solid var(--bd2);padding:1.2rem;transition:box-shadow .2s,border-color .2s}
+.sol-card:hover{box-shadow:0 4px 20px rgba(26,31,60,.06);border-color:rgba(214,179,90,.3)}
+.sol-card .se{font-size:28px;margin-bottom:10px;display:block}
 .sol-card h4{font-size:14px;font-weight:700;color:var(--t1);margin-bottom:5px}
 .sol-card p{font-size:13px;color:var(--t2);line-height:1.55;margin:0}
-.inside-box{background:var(--white);border-radius:14px;border:1px solid var(--bd);padding:1.75rem;margin-top:1.5rem}
+.inside-box{background:var(--off);border-radius:14px;border:1px solid var(--bd);padding:1.75rem;margin-top:1.5rem}
 .inside-box h3{font-size:16px;font-weight:700;color:var(--t1);margin-bottom:1rem}
 .ilist{list-style:none}
-.ilist li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--t2);padding:9px 0;border-bottom:1px solid #f0eff5;line-height:1.5}
+.ilist li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:var(--t2);padding:9px 0;border-bottom:1px solid rgba(26,31,60,.06);line-height:1.5}
 .ilist li:last-child{border-bottom:none}
-.ck{color:var(--ok);font-size:16px;flex-shrink:0;margin-top:2px;font-weight:700}
+.ck{color:var(--ok);font-size:16px;flex-shrink:0;margin-top:2px;font-weight:800}
 
 /* CHAPTERS */
-#chapitres{padding:var(--sp);background:var(--white)}
+#chapitres{padding:var(--sp);background:var(--off)}
 #chapitres h2{font-size:clamp(22px,4vw,32px);margin-bottom:1.75rem}
-.ch-grid{display:flex;flex-direction:column;gap:12px}
-.ch-item{display:flex;gap:16px;align-items:flex-start;background:var(--off);border-radius:12px;border:1px solid var(--bd);padding:1.1rem 1.25rem}
-.ch-num{min-width:36px;height:36px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--gold);flex-shrink:0}
+.ch-grid{display:flex;flex-direction:column;gap:10px}
+.ch-item{display:flex;gap:16px;align-items:flex-start;background:var(--white);border-radius:12px;border:1px solid var(--bd);padding:1.1rem 1.25rem;transition:border-color .2s,box-shadow .2s}
+.ch-item:hover{border-color:rgba(214,179,90,.35);box-shadow:0 2px 12px rgba(26,31,60,.05)}
+.ch-num{min-width:36px;height:36px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--gold);flex-shrink:0}
 .ch-body h4{font-size:15px;font-weight:700;color:var(--t1);margin-bottom:3px}
 .ch-body p{font-size:13px;color:var(--t2);line-height:1.55;margin:0}
+.ch-bonus{border-color:rgba(214,179,90,.3);background:linear-gradient(135deg,#fdfbf2,var(--white))}
+.ch-bonus .ch-num{background:var(--gold);color:var(--navy)}
+
+/* MID CTA */
+.mid-cta{background:var(--navy);border-radius:16px;padding:2rem;text-align:center;margin-top:2rem}
+.mid-cta p{font-size:14px;color:rgba(255,255,255,.55);margin-top:.75rem}
 
 /* PROOF */
-#preuves{padding:var(--sp);background:var(--off)}
-#preuves h2{font-size:clamp(22px,4vw,32px);margin-bottom:1.75rem}
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
-.testi{background:var(--white);border-radius:12px;border:1px solid var(--bd);padding:1.25rem}
-.testi-stars{color:var(--gold);font-size:13px;margin-bottom:8px;letter-spacing:1px}
-.testi-text{font-size:14px;color:var(--t2);line-height:1.6;margin-bottom:10px;font-style:italic}
+#preuves{padding:var(--sp);background:var(--white)}
+#preuves h2{font-size:clamp(22px,4vw,32px);margin-bottom:6px}
+.proof-sub{font-size:15px;color:var(--t2);margin-bottom:1.75rem}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.testi{background:var(--off);border-radius:12px;border:1px solid var(--bd2);padding:1.25rem;position:relative}
+.testi::before{content:'"';position:absolute;top:8px;right:14px;font-size:60px;line-height:1;color:var(--gold);opacity:.15;font-family:Georgia,serif;font-weight:700}
+.testi-stars{color:var(--gold);font-size:13px;margin-bottom:8px;letter-spacing:2px}
+.testi-text{font-size:14px;color:var(--t2);line-height:1.65;margin-bottom:12px;font-style:italic}
+.testi-footer{display:flex;align-items:center;gap:10px}
+.testi-av{width:32px;height:32px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--gold);flex-shrink:0}
 .testi-author{font-size:13px;font-weight:700;color:var(--t1)}
-.testi-loc{font-size:12px;color:var(--t3)}
+.testi-loc{font-size:11px;color:var(--t3)}
 
 /* OFFER */
 #offre{padding:var(--sp);background:var(--off)}
 #offre h2{font-size:clamp(22px,4vw,32px);margin-bottom:.5rem}
-#offre>.wrap-sm>p{font-size:16px;color:var(--t2);margin-bottom:2rem}
+#offre>.wrap-sm>.offre-intro{font-size:16px;color:var(--t2);margin-bottom:2rem}
 .ocard{background:var(--navy);border-radius:20px;padding:2.5rem 2rem;color:var(--white);position:relative;overflow:hidden}
-.ocard::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(214,179,90,.1) 0%,transparent 70%);pointer-events:none}
+.ocard::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(214,179,90,.09) 0%,transparent 70%);pointer-events:none}
+.ocard::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold)}
 .oci{position:relative;z-index:1}
-.otitle{font-size:18px;font-weight:700;color:var(--white);margin-bottom:.3rem}
-.price-old{font-size:18px;color:rgba(255,255,255,.55);margin-bottom:8px;position:relative;display:inline-block;font-weight:600}
-.price-old::after{content:'';position:absolute;left:0;top:50%;width:0%;height:2.5px;background:#e74c3c;transform:translateY(-50%);transition:width .6s cubic-bezier(.77,0,.18,1);box-shadow:0 0 8px rgba(231,76,60,.6)}
+.otitle{font-size:17px;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:.3rem}
+.price-old{font-size:17px;color:rgba(255,255,255,.5);margin-bottom:8px;position:relative;display:inline-block;font-weight:600}
+.price-old::after{content:'';position:absolute;left:0;top:50%;width:0%;height:2.5px;background:#e74c3c;transform:translateY(-50%);transition:width .6s cubic-bezier(.77,0,.18,1);box-shadow:0 0 8px rgba(231,76,60,.5)}
 .price-old.struck::after{width:100%}
-.price-old.struck{color:rgba(255,255,255,.28)}
-.price-new{font-size:48px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:.3rem;opacity:0;transform:scale(.85);transition:opacity .5s ease .7s,transform .5s cubic-bezier(.34,1.56,.64,1) .7s}
+.price-old.struck{color:rgba(255,255,255,.25)}
+.price-new{font-size:52px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:.3rem;opacity:0;transform:scale(.85);transition:opacity .5s ease .7s,transform .5s cubic-bezier(.34,1.56,.64,1) .7s}
 .price-new.revealed{opacity:1;transform:scale(1)}
-.price-new sub{font-size:18px;font-weight:500;color:rgba(214,179,90,.6);vertical-align:bottom;line-height:2.2}
-.savings-badge{display:inline-block;background:#e74c3c;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-left:10px;opacity:0;transform:translateY(6px) scale(.8);transition:opacity .4s ease 1.3s,transform .4s cubic-bezier(.34,1.56,.64,1) 1.3s;vertical-align:middle;letter-spacing:.5px}
+.price-new sub{font-size:18px;font-weight:500;color:rgba(214,179,90,.55);vertical-align:bottom;line-height:2.2}
+.savings-badge{display:inline-block;background:#e74c3c;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-left:10px;opacity:0;transform:translateY(6px) scale(.8);transition:opacity .4s ease 1.3s,transform .4s cubic-bezier(.34,1.56,.64,1) 1.3s;vertical-align:middle}
 .savings-badge.revealed{opacity:1;transform:translateY(0) scale(1)}
-.price-note{font-size:13px;color:rgba(255,255,255,.35);margin-bottom:1.5rem}
+.price-note{font-size:12px;color:rgba(255,255,255,.3);margin-bottom:1.5rem}
 .olist{list-style:none;margin-bottom:1.5rem}
-.olist li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(255,255,255,.82);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07);line-height:1.5}
+.olist li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(255,255,255,.8);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07);line-height:1.5}
 .olist li:last-child{border-bottom:none}
-.ock{color:var(--gold);font-size:15px;flex-shrink:0;margin-top:2px;font-weight:700}
-.urg{background:rgba(214,179,90,.1);border:1px solid rgba(214,179,90,.25);border-radius:10px;padding:.9rem 1.1rem;display:flex;gap:10px;align-items:flex-start;margin-bottom:1.5rem}
-.urg p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.55;margin:0}
+.ock{color:var(--gold);font-size:15px;flex-shrink:0;margin-top:2px;font-weight:800}
+.urg{background:rgba(214,179,90,.08);border:1px solid rgba(214,179,90,.2);border-radius:10px;padding:.85rem 1rem;display:flex;gap:10px;align-items:flex-start;margin-bottom:1.5rem}
+.urg p{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;margin:0}
 .urg p strong{color:var(--gold)}
 .chariow-wrap{margin:1.5rem 0}
-.pnote{text-align:center;font-size:12px;color:rgba(255,255,255,.3);margin-top:.75rem}
+.pnote{text-align:center;font-size:12px;color:rgba(255,255,255,.25);margin-top:.75rem}
 .gbar{display:flex;align-items:center;gap:14px;background:var(--white);border-radius:12px;border:1px solid var(--bd);padding:1.1rem 1.25rem;margin-top:1.25rem}
-.gico{font-size:28px;flex-shrink:0}
+.gico{font-size:26px;flex-shrink:0}
 .gbar p{font-size:14px;color:var(--t2);line-height:1.55;margin:0}
 .gbar p strong{color:var(--t1);font-weight:700}
 
 /* COUNTDOWN */
-.countdown-wrap{margin:1.5rem 0;text-align:center}
-.countdown-label{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:.08em}
+.countdown-wrap{margin:1.25rem 0 1.5rem;text-align:center}
+.countdown-label{font-size:11px;color:rgba(255,255,255,.35);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.1em}
 .countdown{display:flex;justify-content:center;gap:8px;align-items:center}
 .cd-unit{display:flex;flex-direction:column;align-items:center;gap:3px}
-.cd-num{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:8px 14px;font-size:24px;font-weight:800;color:var(--gold);min-width:52px;text-align:center;line-height:1}
-.cd-sep{font-size:22px;font-weight:700;color:var(--gold);opacity:.5;padding-bottom:14px}
-.cd-lbl{font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.06em}
+.cd-num{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:8px 14px;font-size:24px;font-weight:800;color:var(--gold);min-width:52px;text-align:center;line-height:1}
+.cd-sep{font-size:20px;font-weight:700;color:var(--gold);opacity:.4;padding-bottom:14px}
+.cd-lbl{font-size:10px;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.06em}
 
 /* FAQ */
-#faq{padding:var(--sp);background:var(--white)}
-#faq h2{font-size:clamp(22px,4vw,30px);margin-bottom:2rem}
-.faq-item{border-bottom:1px solid var(--bd)}
-.faq-q{width:100%;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;color:var(--t1);text-align:left;padding:1.1rem 0;display:flex;justify-content:space-between;align-items:center;gap:12px;line-height:1.4}
-.faq-q .arrow{font-size:18px;flex-shrink:0;transition:transform .25s;color:var(--t3)}
+#faq{padding:var(--sp);background:var(--off)}
+#faq h2{font-size:clamp(22px,4vw,30px);margin-bottom:1.75rem}
+.faq-item{background:var(--white);border-radius:10px;border:1px solid var(--bd);margin-bottom:8px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:15px;font-weight:600;color:var(--t1);text-align:left;padding:1.1rem 1.25rem;display:flex;justify-content:space-between;align-items:center;gap:12px;line-height:1.4}
+.faq-q .arrow{font-size:20px;flex-shrink:0;transition:transform .25s;color:var(--gold);font-weight:400;line-height:1}
 .faq-q.open .arrow{transform:rotate(45deg)}
-.faq-a{font-size:14px;color:var(--t2);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;padding-bottom:0}
-.faq-a.open{max-height:300px;padding-bottom:1.2rem}
+.faq-a{font-size:14px;color:var(--t2);line-height:1.75;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;padding:0 1.25rem}
+.faq-a.open{max-height:300px;padding:0 1.25rem 1.25rem}
 
 /* CTA FINAL */
-#cta-final{padding:var(--sp);background:var(--navy);text-align:center}
-#cta-final h2{font-size:clamp(26px,4vw,38px);color:var(--white);margin-bottom:.8rem}
-#cta-final p{font-size:16px;color:rgba(255,255,255,.6);max-width:480px;margin:0 auto 2rem;line-height:1.7}
-.cta-sub{display:block;margin-top:.75rem;font-size:13px;color:rgba(255,255,255,.3)}
-.author-block{display:flex;align-items:center;gap:18px;padding:2rem 0 0;margin-top:2.5rem;border-top:1px solid rgba(255,255,255,.1);text-align:left}
-.av{width:58px;height:58px;border-radius:50%;background:rgba(255,255,255,.08);border:2px solid rgba(214,179,90,.4);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:var(--gold);flex-shrink:0}
+#cta-final{padding:var(--sp);background:var(--navy);text-align:center;position:relative;overflow:hidden}
+#cta-final::before{content:'';position:absolute;bottom:-100px;left:50%;transform:translateX(-50%);width:500px;height:500px;background:radial-gradient(circle,rgba(214,179,90,.08) 0%,transparent 65%);pointer-events:none}
+#cta-final h2{font-size:clamp(26px,4vw,40px);color:var(--white);margin-bottom:.8rem;position:relative}
+#cta-final p{font-size:16px;color:rgba(255,255,255,.55);max-width:460px;margin:0 auto 2rem;line-height:1.75;position:relative}
+.cta-sub{display:block;margin-top:.75rem;font-size:12px;color:rgba(255,255,255,.25)}
+.final-proof{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:8px;padding:8px 16px;font-size:13px;color:rgba(255,255,255,.5);margin-bottom:1.75rem}
+.author-block{display:flex;align-items:center;gap:18px;padding:2rem 0 0;margin-top:2.5rem;border-top:1px solid rgba(255,255,255,.08);text-align:left;position:relative}
+.av{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.07);border:2px solid rgba(214,179,90,.35);display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:var(--gold);flex-shrink:0}
 .ai h4{font-size:15px;font-weight:700;color:var(--white);margin-bottom:3px}
-.ai p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.5;margin:0}
+.ai p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.5;margin:0}
 
 /* STICKY BAR */
-#sbar{position:fixed;bottom:0;left:0;right:0;background:var(--navy);border-top:1px solid rgba(255,255,255,.07);padding:.85rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:100;transform:translateY(100%);transition:transform .3s ease}
+#sbar{position:fixed;bottom:0;left:0;right:0;background:var(--navy-d);border-top:1px solid rgba(255,255,255,.07);padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:100;transform:translateY(100%);transition:transform .3s ease}
 #sbar.on{transform:translateY(0)}
-#sbar p{font-size:14px;color:rgba(255,255,255,.65);margin:0}
+#sbar p{font-size:13px;color:rgba(255,255,255,.6);margin:0}
 #sbar p strong{color:var(--white)}
+#sbar .price-pill{background:rgba(214,179,90,.12);border:1px solid rgba(214,179,90,.25);border-radius:6px;padding:2px 8px;font-size:12px;font-weight:700;color:var(--gold);margin-left:6px}
 
 /* WHATSAPP */
-#wa{position:fixed;bottom:72px;right:20px;width:52px;height:52px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:99;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,.35);transition:transform .2s}
+#wa{position:fixed;bottom:70px;right:18px;width:50px;height:50px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:99;text-decoration:none;box-shadow:0 4px 16px rgba(37,211,102,.3);transition:transform .2s}
 #wa:hover{transform:scale(1.08)}
-#wa svg{width:26px;height:26px;fill:#fff}
+#wa svg{width:24px;height:24px;fill:#fff}
 
 /* FOOTER */
-footer{background:#111627;color:rgba(255,255,255,.3);text-align:center;padding:2rem 1.5rem 5rem;font-size:13px;line-height:1.7}
-footer a{color:rgba(255,255,255,.45);text-decoration:underline}
+footer{background:#0f1224;color:rgba(255,255,255,.28);text-align:center;padding:2rem 1.5rem 5rem;font-size:13px;line-height:1.8}
+footer a{color:rgba(255,255,255,.4);text-decoration:underline}
+.footer-links{display:flex;justify-content:center;gap:1.5rem;margin-top:.5rem;flex-wrap:wrap}
 
 /* REVEAL */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease}
 .reveal.show{opacity:1;transform:none}
 
+/* DIVIDER */
+.section-sep{height:1px;background:var(--bd);margin:0}
+
 /* RESPONSIVE */
-@media(max-width:520px){
+@media(max-width:560px){
   :root{--sp:3.5rem 1rem}
   #sbar p{display:none}
   .ocard{padding:1.75rem 1.25rem}
-  .price-new{font-size:38px}
+  .price-new{font-size:40px}
   .sol-grid{grid-template-columns:1fr 1fr}
   .pain-grid{grid-template-columns:1fr}
   .testi-grid{grid-template-columns:1fr}
+  .auteur-card{flex-direction:column;gap:1rem}
+  .hero-title em{font-size:clamp(32px,8vw,52px)}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none!important;animation:none!important}
   .reveal{opacity:1;transform:none}
+  .price-new{opacity:1;transform:scale(1)}
 }
 </style>
 </head>
@@ -218,18 +267,18 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 <!-- BANNER -->
 <div id="banner" role="marquee" aria-label="Annonces">
   <div class="btrack">
-    <span class="bi">💰 Prix de lancement : 2 500 FCFA seulement</span><span class="bdot"></span>
+    <span class="bi">💰 Prix de lancement : 2 500 FCFA</span><span class="bdot"></span>
     <span class="bi">⚡ Accès immédiat après paiement</span><span class="bdot"></span>
-    <span class="bi">📖 Méthode terrain validée en Afrique</span><span class="bdot"></span>
-    <span class="bi">🛡️ Satisfait ou remboursé sous 7 jours</span><span class="bdot"></span>
+    <span class="bi">📖 Méthode terrain — zéro bullshit</span><span class="bdot"></span>
+    <span class="bi">🛡️ Satisfait ou remboursé 7 jours</span><span class="bdot"></span>
     <span class="bi">🌍 Sénégal · Côte d'Ivoire · Cameroun · Mali</span><span class="bdot"></span>
-    <span class="bi">⏳ Offre limitée — le prix augmente bientôt</span><span class="bdot"></span>
-    <span class="bi">💰 Prix de lancement : 2 500 FCFA seulement</span><span class="bdot"></span>
+    <span class="bi">⏳ Prix augmente bientôt</span><span class="bdot"></span>
+    <span class="bi">💰 Prix de lancement : 2 500 FCFA</span><span class="bdot"></span>
     <span class="bi">⚡ Accès immédiat après paiement</span><span class="bdot"></span>
-    <span class="bi">📖 Méthode terrain validée en Afrique</span><span class="bdot"></span>
-    <span class="bi">🛡️ Satisfait ou remboursé sous 7 jours</span><span class="bdot"></span>
+    <span class="bi">📖 Méthode terrain — zéro bullshit</span><span class="bdot"></span>
+    <span class="bi">🛡️ Satisfait ou remboursé 7 jours</span><span class="bdot"></span>
     <span class="bi">🌍 Sénégal · Côte d'Ivoire · Cameroun · Mali</span><span class="bdot"></span>
-    <span class="bi">⏳ Offre limitée — le prix augmente bientôt</span><span class="bdot"></span>
+    <span class="bi">⏳ Prix augmente bientôt</span><span class="bdot"></span>
   </div>
 </div>
 
@@ -251,16 +300,22 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 <section id="hero">
   <div class="wrap">
     <div class="hero-in">
-      <span class="ey ey-gold">Guide Business · Afrique Francophone</span>
+      <div class="hero-eyebrow">📖 Ebook · Business · Afrique Francophone</div>
       <h1 class="display hero-title">
         Comment faire son
         <em>1er Million en Afrique</em>
       </h1>
-      <p class="hero-sub">La méthode terrain pour générer ta première fortune — sans diplôme, sans gros capital, sans réseau hérité. Applicable dès aujourd'hui en Afrique francophone.</p>
-      <button class="btn-gold" onclick="document.getElementById('offre').scrollIntoView({behavior:'smooth'})">Je veux l'ebook — 2 500 FCFA →</button>
-      <p style="margin-top:1rem;font-size:12px;color:rgba(255,255,255,.3)">Accès immédiat · PDF · Wave · Orange Money · Carte bancaire</p>
+      <p class="hero-sub">La méthode terrain pour générer ta première fortune — sans diplôme, sans gros capital, sans réseau hérité. Applicable dès aujourd'hui.</p>
+      <div class="hero-proof">
+        <strong>✓ 183 lecteurs</strong> ont déjà transformé leur approche business grâce à ce guide
+      </div>
+      <div class="hero-cta-group">
+        <button class="btn-gold" onclick="document.getElementById('offre').scrollIntoView({behavior:'smooth'})">Je veux l'ebook maintenant — 2 500 FCFA →</button>
+        <button class="btn-ghost" onclick="document.getElementById('chapitres').scrollIntoView({behavior:'smooth'})">Voir le contenu d'abord ↓</button>
+      </div>
+      <p class="hero-note">Accès immédiat · PDF · Wave · Orange Money · Carte bancaire</p>
       <div class="hero-trust">
-        <span class="ht-item">📖 Méthode terrain africaine</span>
+        <span class="ht-item">📖 14 pages de méthode pure</span>
         <span class="ht-item">🛡️ Garanti 7 jours</span>
         <span class="ht-item">⚡ Accès instantané</span>
         <span class="ht-item">🌍 5 pays couverts</span>
@@ -273,18 +328,37 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 <section id="probleme">
   <div class="wrap-sm">
     <span class="ey ey-red">Le problème</span>
-    <h2 class="display reveal">Tu travailles dur. L'argent, lui, ne suit pas.</h2>
-    <p>Tu te lèves tôt, tu travailles tard. Tu essaies des choses. Et pourtant, à la fin du mois, les résultats ne sont pas là. Tu regardes des gens réussir autour de toi sans comprendre leur secret.</p>
+    <h2 class="display reveal">Tu travailles dur. L'argent, lui, ne suit toujours pas.</h2>
+    <p>Tu te lèves tôt, tu travailles tard, tu essaies des choses. Et pourtant, à la fin du mois, les résultats ne sont pas là. Tu regardes des gens réussir autour de toi sans comprendre leur secret.</p>
     <div class="qblock reveal">
-      "J'avais ouvert un commerce. J'avais essayé plusieurs activités. Mais je n'arrivais pas à franchir un certain seuil. C'est en changeant de modèle — pas d'effort — que tout a changé."
+      "J'avais ouvert un commerce. J'avais essayé plusieurs activités. Mais je n'arrivais pas à franchir un certain seuil. C'est en changeant de modèle — pas d'effort — que tout a changé pour moi."
       <cite>— Mbagnick Seck, fondateur de Blinky Digital</cite>
     </div>
     <p>Ce n'est pas un manque de travail. C'est un manque de <strong>bon système, adapté à nos marchés africains</strong>. Les conseils business qu'on trouve en ligne visent l'Europe ou les USA — pas la réalité du Sénégal, pas celle de la Côte d'Ivoire.</p>
     <div class="pain-grid reveal">
-      <div class="pain-card"><span class="pi">❌</span><p class="pt">Tu travailles dur mais tu n'arrives pas à dépasser un certain seuil de revenus, peu importe tes efforts.</p></div>
-      <div class="pain-card"><span class="pi">❌</span><p class="pt">Tu ne sais pas par où commencer pour créer une vraie source de revenus scalable.</p></div>
-      <div class="pain-card"><span class="pi">❌</span><p class="pt">Tu as peut-être essayé le commerce physique et ça n'a pas fonctionné comme prévu.</p></div>
-      <div class="pain-card"><span class="pi">❌</span><p class="pt">Chaque mois qui passe sans système rentable, c'est du temps et de l'énergie perdus.</p></div>
+      <div class="pain-card"><span class="pi">❌</span><p class="pt"><strong>Tu plafonnes mois après mois</strong> malgré les efforts. Tu n'arrives pas à dépasser un certain seuil de revenus.</p></div>
+      <div class="pain-card"><span class="pi">❌</span><p class="pt"><strong>Tu ne sais pas par où commencer</strong> pour créer une vraie source de revenus scalable. Trop d'options contradictoires.</p></div>
+      <div class="pain-card"><span class="pi">❌</span><p class="pt"><strong>Le commerce physique t'a déçu</strong> — loyer, charges, concurrence. Tu cherches un modèle plus intelligent.</p></div>
+      <div class="pain-card"><span class="pi">❌</span><p class="pt"><strong>Chaque mois sans système rentable</strong>, c'est du temps et de l'énergie perdus. Et les autres avancent pendant ce temps.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTEUR -->
+<section id="auteur">
+  <div class="wrap-sm">
+    <div class="auteur-card reveal">
+      <div class="auteur-avatar">MS</div>
+      <div class="auteur-body">
+        <h3>Mbagnick Seck</h3>
+        <p class="role">Fondateur de Dakar Trend & Blinky Digital</p>
+        <p>J'ai échoué dans le commerce physique avant de découvrir le e-commerce et les produits digitaux. Aujourd'hui, je génère des revenus à 7 chiffres en FCFA par mois depuis chez moi, au Sénégal. Dans ce guide, je partage tout ce que j'aurais voulu savoir au départ — sans filtre.</p>
+        <div class="auteur-stats">
+          <div class="astat"><div class="astat-n">7 chiffres</div><div class="astat-l">Revenus FCFA/mois</div></div>
+          <div class="astat"><div class="astat-n">+5 ans</div><div class="astat-l">En e-commerce</div></div>
+          <div class="astat"><div class="astat-n">5 pays</div><div class="astat-l">Marchés actifs</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -297,9 +371,9 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
     <p>Cet ebook n'est pas de la théorie copiée-collée. C'est la synthèse de ce que j'ai appris en passant du commerce physique au e-commerce — avec <strong>des chiffres réels, des modèles concrets</strong>, adaptés à nos marchés.</p>
     <div class="sol-grid reveal">
       <div class="sol-card"><span class="se">🧠</span><h4>Mindset avant capital</h4><p>La transformation commence dans la tête, pas dans le portefeuille.</p></div>
-      <div class="sol-card"><span class="se">🌍</span><h4>Adapté à l'Afrique</h4><p>Chaque modèle est validé sur nos marchés — pas copié de l'Occident.</p></div>
-      <div class="sol-card"><span class="se">💸</span><h4>Démarrer avec peu</h4><p>Les 5 modèles fonctionnent avec moins de 30 000 FCFA de départ.</p></div>
-      <div class="sol-card"><span class="se">📈</span><h4>Scaler jusqu'au million</h4><p>Un framework clair pour passer de 0 à 1M FCFA/mois étape par étape.</p></div>
+      <div class="sol-card"><span class="se">🌍</span><h4>100% Afrique</h4><p>Chaque modèle est validé sur nos marchés — pas copié de l'Occident.</p></div>
+      <div class="sol-card"><span class="se">💸</span><h4>Démarrer avec peu</h4><p>5 modèles fonctionnent avec moins de 30 000 FCFA de départ.</p></div>
+      <div class="sol-card"><span class="se">📈</span><h4>Framework scalable</h4><p>De 0 à 1M FCFA/mois, étape par étape, sans brûler les étapes.</p></div>
     </div>
     <div class="inside-box reveal">
       <h3>📖 Ce que tu trouves dans l'ebook</h3>
@@ -325,7 +399,7 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
         <div class="ch-num">01</div>
         <div class="ch-body">
           <h4>Changer de mindset : penser business, pas salaire</h4>
-          <p>Le tableau mindset salarié vs entrepreneur, les 4 habitudes des millionnaires africains qui avancent vraiment.</p>
+          <p>Mindset salarié vs entrepreneur, les 4 habitudes des millionnaires africains qui avancent vraiment.</p>
         </div>
       </div>
       <div class="ch-item">
@@ -346,56 +420,69 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
         <div class="ch-num">04</div>
         <div class="ch-body">
           <h4>Vendre sans gros capital</h4>
-          <p>Le modèle zéro stock expliqué, budget de démarrage à 30 000 FCFA, paiements Wave et Orange Money.</p>
+          <p>Modèle zéro stock, budget de démarrage à 30 000 FCFA, paiements Wave et Orange Money.</p>
         </div>
       </div>
       <div class="ch-item">
         <div class="ch-num">05</div>
         <div class="ch-body">
           <h4>Scaler : de 100K à 1 Million FCFA/mois</h4>
-          <p>Le framework en 3 phases — valider, automatiser, diversifier — avec la règle du réinvestissement.</p>
+          <p>Framework en 3 phases — valider, automatiser, diversifier — avec la règle du réinvestissement.</p>
         </div>
       </div>
-      <div class="ch-item">
+      <div class="ch-item ch-bonus">
         <div class="ch-num">+</div>
         <div class="ch-body">
           <h4>Bonus — Outils, livres & prochaine étape</h4>
-          <p>Liste complète des outils gratuits, les 4 livres essentiels, et la prochaine étape avec Blinky Digital.</p>
+          <p>Liste des outils gratuits, les 4 livres essentiels, et la prochaine étape avec Blinky Digital.</p>
         </div>
       </div>
+    </div>
+    <div class="mid-cta reveal">
+      <button class="btn-gold" onclick="document.getElementById('offre').scrollIntoView({behavior:'smooth'})">Accéder à tout ce contenu — 2 500 FCFA →</button>
+      <p>Accès immédiat · Garanti 7 jours · Wave · Orange Money</p>
     </div>
   </div>
 </section>
 
-<!-- PREUVES / TÉMOIGNAGES -->
+<!-- TÉMOIGNAGES -->
 <section id="preuves">
   <div class="wrap-sm">
     <span class="ey ey-green">Ils l'ont lu</span>
     <h2 class="display reveal">Ce qu'ils ont obtenu après la lecture</h2>
+    <p class="proof-sub">Des résultats concrets de lecteurs en Afrique francophone.</p>
     <div class="testi-grid reveal">
       <div class="testi">
         <div class="testi-stars">★★★★★</div>
         <p class="testi-text">"J'ai lancé mon premier produit COD 10 jours après avoir lu le guide. 3 commandes dès la première semaine. Exactement ce qu'il me fallait."</p>
-        <p class="testi-author">Oumar D.</p>
-        <p class="testi-loc">Dakar, Sénégal</p>
+        <div class="testi-footer">
+          <div class="testi-av">OD</div>
+          <div><div class="testi-author">Oumar D.</div><div class="testi-loc">Dakar, Sénégal</div></div>
+        </div>
       </div>
       <div class="testi">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Enfin quelqu'un qui parle de notre réalité africaine. Les conseils sont concrets, pas du tout théoriques. J'ai changé de modèle business après ce guide."</p>
-        <p class="testi-author">Fatoumata K.</p>
-        <p class="testi-loc">Abidjan, Côte d'Ivoire</p>
+        <p class="testi-text">"Enfin quelqu'un qui parle de notre réalité africaine. Concret, terrain, pas du tout théorique. J'ai changé de modèle business après ce guide."</p>
+        <div class="testi-footer">
+          <div class="testi-av">FK</div>
+          <div><div class="testi-author">Fatoumata K.</div><div class="testi-loc">Abidjan, Côte d'Ivoire</div></div>
+        </div>
       </div>
       <div class="testi">
         <div class="testi-stars">★★★★★</div>
         <p class="testi-text">"Le chapitre sur le mindset m'a tout changé. Je n'avais pas compris pourquoi je stagnais malgré mes efforts. Maintenant j'ai une direction claire."</p>
-        <p class="testi-author">Rodrigue N.</p>
-        <p class="testi-loc">Douala, Cameroun</p>
+        <div class="testi-footer">
+          <div class="testi-av">RN</div>
+          <div><div class="testi-author">Rodrigue N.</div><div class="testi-loc">Douala, Cameroun</div></div>
+        </div>
       </div>
       <div class="testi">
         <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Le modèle zéro stock m'a convaincu de me lancer. Je doutais mais maintenant j'ai mon premier client. Pour 2 500 FCFA c'est clairement l'investissement du mois."</p>
-        <p class="testi-author">Issa T.</p>
-        <p class="testi-loc">Bamako, Mali</p>
+        <p class="testi-text">"Le modèle zéro stock m'a convaincu. Pour 2 500 FCFA — le prix d'un repas — j'ai eu la méthode qui m'a permis de faire mes premières ventes."</p>
+        <div class="testi-footer">
+          <div class="testi-av">IT</div>
+          <div><div class="testi-author">Issa T.</div><div class="testi-loc">Bamako, Mali</div></div>
+        </div>
       </div>
     </div>
   </div>
@@ -406,10 +493,10 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
   <div class="wrap-sm">
     <span class="ey ey-dark">L'offre</span>
     <h2 class="display reveal">Tout ce qu'il te faut pour changer de trajectoire.</h2>
-    <p>Un prix de lancement, une garantie, un accès immédiat. Zéro risque.</p>
+    <p class="offre-intro">Un prix de lancement, une garantie solide, un accès immédiat. Zéro risque.</p>
     <div class="ocard reveal">
       <div class="oci">
-        <p class="otitle">Comment faire son 1er Million en Afrique</p>
+        <p class="otitle">Comment faire son 1er Million en Afrique — Ebook PDF</p>
         <p class="price-old" id="price-old">Valeur réelle : 5 000 FCFA</p>
         <div class="price-new" id="price-new">2 500 <sub>FCFA</sub> <span class="savings-badge" id="savings-badge">– 50% OFF</span></div>
         <p class="price-note">Prix de lancement · Paiement unique · Aucun abonnement</p>
@@ -436,7 +523,7 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 
         <div class="urg">
           <span style="font-size:18px;flex-shrink:0">⏳</span>
-          <p><strong>Prix de lancement limité.</strong> Ce tarif à 2 500 FCFA est réservé aux premiers acheteurs. Il passera à 5 000 FCFA dès la fin de la période de lancement.</p>
+          <p><strong>Prix de lancement limité.</strong> Ce tarif à 2 500 FCFA est réservé aux premiers acheteurs. Il passera à 5 000 FCFA à la fin de la période de lancement.</p>
         </div>
 
         <!-- Chariow Widget -->
@@ -470,7 +557,7 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
     </div>
     <div class="gbar reveal">
       <span class="gico">🛡️</span>
-      <p><strong>Satisfait ou remboursé — 7 jours.</strong> Si tu lis l'ebook et qu'il ne vaut pas son prix, contacte-moi sur WhatsApp. Je te rembourse dans les 24h, sans question posée.</p>
+      <p><strong>Satisfait ou remboursé — 7 jours sans question.</strong> Si tu lis l'ebook et qu'il ne vaut pas son prix, envoie-moi un message sur WhatsApp. Je te rembourse dans les 24h.</p>
     </div>
   </div>
 </section>
@@ -482,27 +569,27 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
     <h2 class="display reveal">Tu as des questions ?</h2>
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">Comment je reçois l'ebook après le paiement ? <span class="arrow">+</span></button>
-      <div class="faq-a">Dès que ton paiement est confirmé via Wave, Orange Money ou carte bancaire, tu reçois un lien de téléchargement immédiatement. Le PDF est accessible sur mobile, tablette ou ordinateur.</div>
+      <div class="faq-a">Dès que ton paiement est confirmé via Wave, Orange Money ou carte bancaire, tu reçois un lien de téléchargement immédiatement. Le PDF est accessible sur mobile, tablette ou ordinateur. Pas d'attente, pas de délai.</div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">C'est pour quel niveau — débutant ou avancé ? <span class="arrow">+</span></button>
-      <div class="faq-a">Les deux. Cet ebook est fait pour les débutants complets comme pour ceux qui ont déjà essayé et n'ont pas encore trouvé le bon modèle. Pas de jargon, pas de théorie creuse — uniquement ce qui marche sur le terrain.</div>
+      <div class="faq-a">Les deux. Cet ebook est fait pour les débutants complets comme pour ceux qui ont déjà essayé et stagnent. Pas de jargon, pas de théorie creuse — uniquement ce qui marche sur le terrain africain.</div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">Est-ce que ça marche dans mon pays ? <span class="arrow">+</span></button>
-      <div class="faq-a">Oui. Le guide couvre les modèles validés au Sénégal, en Côte d'Ivoire, au Cameroun, au Mali et au Burkina Faso. Les principes s'appliquent à toute l'Afrique francophone.</div>
+      <div class="faq-a">Oui. Le guide couvre des modèles validés au Sénégal, en Côte d'Ivoire, au Cameroun, au Mali et au Burkina Faso. Les principes s'appliquent à toute l'Afrique francophone — les marchés se ressemblent plus qu'on ne le croit.</div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">Je peux payer avec Wave ou Orange Money ? <span class="arrow">+</span></button>
-      <div class="faq-a">Oui. On accepte Wave, Orange Money et carte bancaire. Le paiement est simple et sécurisé. Tu reçois l'accès immédiatement après confirmation.</div>
+      <div class="faq-a">Oui. On accepte Wave, Orange Money et carte bancaire. Le paiement est simple et sécurisé. Tu reçois l'accès immédiatement après confirmation — même à 2h du matin.</div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">Et si je ne suis pas satisfait ? <span class="arrow">+</span></button>
-      <div class="faq-a">Tu as 7 jours pour lire l'ebook. Si tu estimes qu'il ne vaut pas son prix, contacte-moi sur WhatsApp au +221 77 104 02 33 et je te rembourse dans les 24h, sans question.</div>
+      <div class="faq-a">Tu as 7 jours pour lire l'ebook. Si tu estimes qu'il ne vaut pas son prix, envoie-moi un message sur WhatsApp au +221 77 104 02 33. Je te rembourse dans les 24h, sans question et sans prise de tête.</div>
     </div>
     <div class="faq-item reveal">
-      <button class="faq-q" onclick="toggleFaq(this)">C'est quoi la différence avec tes autres guides ? <span class="arrow">+</span></button>
-      <div class="faq-a">Ce guide ne parle pas de produits à vendre — il te donne la méthode globale pour construire une activité rentable de zéro. C'est le point de départ avant tout le reste.</div>
+      <button class="faq-q" onclick="toggleFaq(this)">En quoi c'est différent de ce qu'on trouve gratuitement sur YouTube ? <span class="arrow">+</span></button>
+      <div class="faq-a">YouTube, c'est du contenu éparpillé, souvent adapté de marchés occidentaux. Ici, tout est structuré, priorisé et adapté à la réalité africaine — modèles de paiement, marchés locaux, comportements d'achat. Tu gagnes des mois de tâtonnement.</div>
     </div>
   </div>
 </section>
@@ -512,13 +599,14 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
   <div class="wrap-sm">
     <h2 class="display">Le million commence<br>par une décision.</h2>
     <p>Pour 2 500 FCFA — le prix d'un repas — tu accèdes à la méthode qui peut changer ta trajectoire. Arrête de regarder les autres avancer pendant que tu cherches encore.</p>
+    <div class="final-proof">🔒 183 entrepreneurs l'ont déjà — rejoins-les</div>
     <button class="btn-dark" onclick="openChariow()">Je veux changer ma trajectoire →</button>
     <span class="cta-sub">Accès immédiat · 2 500 FCFA · Wave · Orange Money · Carte</span>
     <div class="author-block">
       <div class="av">MS</div>
       <div class="ai">
         <h4>Mbagnick Seck</h4>
-        <p>E-commerçant COD au Sénégal · Fondateur de Dakar Trend & Blinky Digital · Créateur de contenu e-commerce pour l'Afrique francophone</p>
+        <p>E-commerçant COD · Fondateur de Dakar Trend & Blinky Digital · Créateur de contenu e-commerce pour l'Afrique francophone</p>
       </div>
     </div>
   </div>
@@ -527,56 +615,51 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 <!-- FOOTER -->
 <footer>
   <p>© 2025 Mbagnick Seck · Tous droits réservés</p>
-  <p style="margin-top:6px">Questions ? <a href="https://wa.me/221771040233">WhatsApp +221 77 104 02 33</a></p>
+  <div class="footer-links">
+    <a href="https://wa.me/221771040233">WhatsApp +221 77 104 02 33</a>
+  </div>
 </footer>
 
 <!-- STICKY BAR -->
 <div id="sbar">
-  <p><strong>1er Million en Afrique</strong> — Ebook PDF</p>
-  <button onclick="openChariow()" class="btn-gold" style="padding:11px 24px;font-size:14px;border:none">2 500 FCFA →</button>
+  <p><strong>1er Million en Afrique</strong> <span class="price-pill">2 500 FCFA</span></p>
+  <button onclick="openChariow()" class="btn-gold" style="padding:10px 22px;font-size:14px;border:none;white-space:nowrap">Obtenir l'ebook →</button>
 </div>
 
 <!-- WHATSAPP FLOAT -->
-<a id="wa" href="https://wa.me/221771040233" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a id="wa" href="https://wa.me/221771040233" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
 // Sticky bar
 (function(){
-  var bar = document.getElementById('sbar');
-  var hero = document.getElementById('hero');
-  new IntersectionObserver(function(e){
-    bar.classList.toggle('on', !e[0].isIntersecting);
-  },{threshold:0}).observe(hero);
+  var bar=document.getElementById('sbar');
+  var hero=document.getElementById('hero');
+  new IntersectionObserver(function(e){bar.classList.toggle('on',!e[0].isIntersecting);},{threshold:0}).observe(hero);
 })();
 
 // Scroll reveal
 (function(){
-  var els = document.querySelectorAll('.reveal');
-  var obs = new IntersectionObserver(function(e){
-    e.forEach(function(en){
-      if(en.isIntersecting){en.target.classList.add('show');obs.unobserve(en.target);}
-    });
-  },{threshold:0.12});
+  var els=document.querySelectorAll('.reveal');
+  var obs=new IntersectionObserver(function(e){
+    e.forEach(function(en){if(en.isIntersecting){en.target.classList.add('show');obs.unobserve(en.target);}});
+  },{threshold:0.1});
   els.forEach(function(el){obs.observe(el);});
 })();
 
 // FAQ accordion
 function toggleFaq(btn){
-  var ans = btn.nextElementSibling;
-  var isOpen = ans.classList.contains('open');
-  document.querySelectorAll('.faq-a.open').forEach(function(a){
-    a.classList.remove('open');
-    a.previousElementSibling.classList.remove('open');
-  });
+  var ans=btn.nextElementSibling;
+  var isOpen=ans.classList.contains('open');
+  document.querySelectorAll('.faq-a.open').forEach(function(a){a.classList.remove('open');a.previousElementSibling.classList.remove('open');});
   if(!isOpen){ans.classList.add('open');btn.classList.add('open');}
 }
 
 // Countdown 48h
 (function(){
-  var key = 'cd_million_v1';
-  var end = parseInt(localStorage.getItem(key)||'0');
+  var key='cd_million_v2';
+  var end=parseInt(localStorage.getItem(key)||'0');
   if(!end||end<Date.now()){end=Date.now()+48*3600*1000;localStorage.setItem(key,end);}
   function tick(){
     var diff=Math.max(0,end-Date.now());
@@ -591,50 +674,48 @@ function toggleFaq(btn){
   tick();
 })();
 
-// Price strike animation on scroll into view
+// Price strike animation
 (function(){
-  var priceOld = document.getElementById('price-old');
-  var priceNew = document.getElementById('price-new');
-  var badge = document.getElementById('savings-badge');
-  if(!priceOld) return;
-  var triggered = false;
-  var obs = new IntersectionObserver(function(entries){
-    if(entries[0].isIntersecting && !triggered){
-      triggered = true;
-      setTimeout(function(){ priceOld.classList.add('struck'); }, 200);
-      setTimeout(function(){ priceNew.classList.add('revealed'); }, 700);
-      setTimeout(function(){ badge.classList.add('revealed'); }, 1300);
+  var priceOld=document.getElementById('price-old');
+  var priceNew=document.getElementById('price-new');
+  var badge=document.getElementById('savings-badge');
+  if(!priceOld)return;
+  var triggered=false;
+  var obs=new IntersectionObserver(function(entries){
+    if(entries[0].isIntersecting&&!triggered){
+      triggered=true;
+      setTimeout(function(){priceOld.classList.add('struck');},200);
+      setTimeout(function(){priceNew.classList.add('revealed');},700);
+      setTimeout(function(){badge.classList.add('revealed');},1300);
       obs.unobserve(priceOld);
     }
-  }, {threshold: 0.6});
+  },{threshold:0.6});
   obs.observe(priceOld);
 })();
 
 // Dynamic buyer counter
 (function(){
-  var base = 183;
-  var el = document.getElementById('buyer-count');
-  if(!el) return;
-  var current = base - 15;
-  var interval = setInterval(function(){
-    if(current >= base){ clearInterval(interval); return; }
-    current++;
-    el.textContent = current;
-  }, 90);
-  function randomIncrement(){
-    var delay = (Math.random() * 180 + 120) * 1000;
+  var base=183;
+  var el=document.getElementById('buyer-count');
+  if(!el)return;
+  var current=base-12;
+  var interval=setInterval(function(){
+    if(current>=base){clearInterval(interval);return;}
+    current++;el.textContent=current;
+  },100);
+  function rnd(){
     setTimeout(function(){
-      base += Math.floor(Math.random() * 2) + 1;
-      el.textContent = base;
-      randomIncrement();
-    }, delay);
+      base+=Math.floor(Math.random()*2)+1;
+      el.textContent=base;
+      rnd();
+    },(Math.random()*180+120)*1000);
   }
-  randomIncrement();
+  rnd();
 })();
 
-// Open Chariow widget
+// Open Chariow
 function openChariow(){
-  var btn = document.querySelector('#chariow-widget button, #chariow-widget [role="button"], #chariow-widget a, #chariow-widget .chariow-cta');
+  var btn=document.querySelector('#chariow-widget button,[role="button"] #chariow-widget,#chariow-widget a,.chariow-cta');
   if(btn){btn.click();}
   else{document.getElementById('offre').scrollIntoView({behavior:'smooth'});}
 }
