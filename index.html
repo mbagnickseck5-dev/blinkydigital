@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>50 Produits Gagnants à Vendre Pendant l'Été — Mbagnick Seck</title>
-<meta name="description" content="50 fiches produits validées pour l'été africain. Lancez votre e-commerce COD au Sénégal dès aujourd'hui — 4 900 FCFA, accès immédiat.">
+<title>Comment faire son 1er Million en Afrique — Mbagnick Seck</title>
+<meta name="description" content="La méthode terrain pour générer ta première fortune en Afrique. Sans diplôme, sans gros capital. Ebook PDF — 2 500 FCFA, accès immédiat.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
@@ -34,18 +34,30 @@ body{font-family:'Inter',sans-serif;font-size:16px;color:var(--t1);background:va
 
 /* BANNER */
 #banner{background:var(--gold);height:40px;overflow:hidden;display:flex;align-items:center}
-.btrack{display:flex;white-space:nowrap;animation:ticker 30s linear infinite}
+.btrack{display:flex;white-space:nowrap;animation:ticker 32s linear infinite}
 .btrack:hover{animation-play-state:paused}
 .bi{display:inline-flex;align-items:center;gap:8px;padding:0 2.5rem;font-size:13px;font-weight:700;color:var(--navy);flex-shrink:0}
 .bdot{display:inline-block;width:4px;height:4px;background:var(--navy);border-radius:50%;opacity:.35;flex-shrink:0}
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
+/* COUNTER BAR */
+#counter-bar{background:var(--navy);padding:1.25rem 1.5rem;text-align:center;border-bottom:1px solid rgba(214,179,90,.15)}
+.counter-inner{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
+.counter-pulse{width:10px;height:10px;background:#22c55e;border-radius:50%;animation:pulse 1.8s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}50%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
+.counter-text{font-size:14px;color:rgba(255,255,255,.75);line-height:1.4}
+.counter-text strong{color:#22c55e;font-size:20px;font-weight:800;margin-right:3px}
+.counter-sub{font-size:12px;color:rgba(255,255,255,.35);margin-top:2px}
+.counter-avatars{display:flex;margin-left:4px}
+.counter-avatars span{width:26px;height:26px;border-radius:50%;border:2px solid var(--navy);background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--navy);margin-left:-8px;flex-shrink:0}
+.counter-avatars span:first-child{margin-left:0}
+
 /* HERO */
 #hero{background:var(--navy);color:var(--white);padding:4.5rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden}
 #hero::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(214,179,90,.13) 0%,transparent 65%);pointer-events:none}
 .hero-in{position:relative;z-index:1}
-.hero-title{font-size:clamp(28px,5vw,44px);color:var(--white);margin-bottom:1.2rem}
-.hero-title em{color:var(--gold);font-style:normal}
+.hero-title{font-size:clamp(28px,5vw,46px);color:var(--white);margin-bottom:1.2rem}
+.hero-title em{color:var(--gold);font-style:normal;display:block}
 .hero-sub{font-size:17px;color:rgba(255,255,255,.72);max-width:520px;margin:0 auto 2rem;line-height:1.75}
 .hero-trust{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-top:2rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.08)}
 .ht-item{display:flex;align-items:center;gap:7px;font-size:13px;color:rgba(255,255,255,.5)}
@@ -86,6 +98,25 @@ body{font-family:'Inter',sans-serif;font-size:16px;color:var(--t1);background:va
 .ilist li:last-child{border-bottom:none}
 .ck{color:var(--ok);font-size:16px;flex-shrink:0;margin-top:2px;font-weight:700}
 
+/* CHAPTERS */
+#chapitres{padding:var(--sp);background:var(--white)}
+#chapitres h2{font-size:clamp(22px,4vw,32px);margin-bottom:1.75rem}
+.ch-grid{display:flex;flex-direction:column;gap:12px}
+.ch-item{display:flex;gap:16px;align-items:flex-start;background:var(--off);border-radius:12px;border:1px solid var(--bd);padding:1.1rem 1.25rem}
+.ch-num{min-width:36px;height:36px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--gold);flex-shrink:0}
+.ch-body h4{font-size:15px;font-weight:700;color:var(--t1);margin-bottom:3px}
+.ch-body p{font-size:13px;color:var(--t2);line-height:1.55;margin:0}
+
+/* PROOF */
+#preuves{padding:var(--sp);background:var(--off)}
+#preuves h2{font-size:clamp(22px,4vw,32px);margin-bottom:1.75rem}
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.testi{background:var(--white);border-radius:12px;border:1px solid var(--bd);padding:1.25rem}
+.testi-stars{color:var(--gold);font-size:13px;margin-bottom:8px;letter-spacing:1px}
+.testi-text{font-size:14px;color:var(--t2);line-height:1.6;margin-bottom:10px;font-style:italic}
+.testi-author{font-size:13px;font-weight:700;color:var(--t1)}
+.testi-loc{font-size:12px;color:var(--t3)}
+
 /* OFFER */
 #offre{padding:var(--sp);background:var(--off)}
 #offre h2{font-size:clamp(22px,4vw,32px);margin-bottom:.5rem}
@@ -94,9 +125,15 @@ body{font-family:'Inter',sans-serif;font-size:16px;color:var(--t1);background:va
 .ocard::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;background:radial-gradient(circle,rgba(214,179,90,.1) 0%,transparent 70%);pointer-events:none}
 .oci{position:relative;z-index:1}
 .otitle{font-size:18px;font-weight:700;color:var(--white);margin-bottom:.3rem}
-.price-old{font-size:14px;color:rgba(255,255,255,.3);text-decoration:line-through;margin-bottom:6px}
-.price-new{font-size:48px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:.3rem}
+.price-old{font-size:18px;color:rgba(255,255,255,.55);margin-bottom:8px;position:relative;display:inline-block;font-weight:600}
+.price-old::after{content:'';position:absolute;left:0;top:50%;width:0%;height:2.5px;background:#e74c3c;transform:translateY(-50%);transition:width .6s cubic-bezier(.77,0,.18,1);box-shadow:0 0 8px rgba(231,76,60,.6)}
+.price-old.struck::after{width:100%}
+.price-old.struck{color:rgba(255,255,255,.28)}
+.price-new{font-size:48px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:.3rem;opacity:0;transform:scale(.85);transition:opacity .5s ease .7s,transform .5s cubic-bezier(.34,1.56,.64,1) .7s}
+.price-new.revealed{opacity:1;transform:scale(1)}
 .price-new sub{font-size:18px;font-weight:500;color:rgba(214,179,90,.6);vertical-align:bottom;line-height:2.2}
+.savings-badge{display:inline-block;background:#e74c3c;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;margin-left:10px;opacity:0;transform:translateY(6px) scale(.8);transition:opacity .4s ease 1.3s,transform .4s cubic-bezier(.34,1.56,.64,1) 1.3s;vertical-align:middle;letter-spacing:.5px}
+.savings-badge.revealed{opacity:1;transform:translateY(0) scale(1)}
 .price-note{font-size:13px;color:rgba(255,255,255,.35);margin-bottom:1.5rem}
 .olist{list-style:none;margin-bottom:1.5rem}
 .olist li{display:flex;align-items:flex-start;gap:10px;font-size:15px;color:rgba(255,255,255,.82);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07);line-height:1.5}
@@ -105,6 +142,12 @@ body{font-family:'Inter',sans-serif;font-size:16px;color:var(--t1);background:va
 .urg{background:rgba(214,179,90,.1);border:1px solid rgba(214,179,90,.25);border-radius:10px;padding:.9rem 1.1rem;display:flex;gap:10px;align-items:flex-start;margin-bottom:1.5rem}
 .urg p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.55;margin:0}
 .urg p strong{color:var(--gold)}
+.chariow-wrap{margin:1.5rem 0}
+.pnote{text-align:center;font-size:12px;color:rgba(255,255,255,.3);margin-top:.75rem}
+.gbar{display:flex;align-items:center;gap:14px;background:var(--white);border-radius:12px;border:1px solid var(--bd);padding:1.1rem 1.25rem;margin-top:1.25rem}
+.gico{font-size:28px;flex-shrink:0}
+.gbar p{font-size:14px;color:var(--t2);line-height:1.55;margin:0}
+.gbar p strong{color:var(--t1);font-weight:700}
 
 /* COUNTDOWN */
 .countdown-wrap{margin:1.5rem 0;text-align:center}
@@ -114,16 +157,6 @@ body{font-family:'Inter',sans-serif;font-size:16px;color:var(--t1);background:va
 .cd-num{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:8px 14px;font-size:24px;font-weight:800;color:var(--gold);min-width:52px;text-align:center;line-height:1}
 .cd-sep{font-size:22px;font-weight:700;color:var(--gold);opacity:.5;padding-bottom:14px}
 .cd-lbl{font-size:10px;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.06em}
-
-/* CHARIOW */
-.chariow-wrap{margin:1.5rem 0}
-.pnote{text-align:center;font-size:12px;color:rgba(255,255,255,.3);margin-top:.75rem}
-
-/* GUARANTEE */
-.gbar{display:flex;align-items:center;gap:14px;background:var(--white);border-radius:12px;border:1px solid var(--bd);padding:1.1rem 1.25rem;margin-top:1.25rem}
-.gico{font-size:28px;flex-shrink:0}
-.gbar p{font-size:14px;color:var(--t2);line-height:1.55;margin:0}
-.gbar p strong{color:var(--t1);font-weight:700}
 
 /* FAQ */
 #faq{padding:var(--sp);background:var(--white)}
@@ -172,75 +205,12 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
   .price-new{font-size:38px}
   .sol-grid{grid-template-columns:1fr 1fr}
   .pain-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none!important;animation:none!important}
   .reveal{opacity:1;transform:none}
 }
-
-
-/* PRICE STRIKE ANIMATION */
-.price-old{
-  font-size:18px;
-  color:rgba(255,255,255,.55);
-  margin-bottom:8px;
-  position:relative;
-  display:inline-block;
-  font-weight:600;
-}
-.price-old::after{
-  content:'';
-  position:absolute;
-  left:0;top:50%;
-  width:0%;height:2.5px;
-  background:#e74c3c;
-  transform:translateY(-50%);
-  transition:width .6s cubic-bezier(.77,0,.18,1);
-  box-shadow:0 0 8px rgba(231,76,60,.6);
-}
-.price-old.struck::after{width:100%}
-.price-old.struck{color:rgba(255,255,255,.28)}
-
-/* Price new reveal animation */
-.price-new{
-  font-size:48px;font-weight:800;color:var(--gold);
-  line-height:1;margin-bottom:.3rem;
-  opacity:0;transform:scale(.85);
-  transition:opacity .5s ease .7s, transform .5s cubic-bezier(.34,1.56,.64,1) .7s;
-}
-.price-new.revealed{opacity:1;transform:scale(1)}
-.price-new sub{font-size:18px;font-weight:500;color:rgba(214,179,90,.6);vertical-align:bottom;line-height:2.2}
-
-/* Savings badge pops in */
-.savings-badge{
-  display:inline-block;
-  background:#e74c3c;
-  color:#fff;
-  font-size:12px;
-  font-weight:700;
-  padding:4px 12px;
-  border-radius:20px;
-  margin-left:10px;
-  opacity:0;
-  transform:translateY(6px) scale(.8);
-  transition:opacity .4s ease 1.3s, transform .4s cubic-bezier(.34,1.56,.64,1) 1.3s;
-  vertical-align:middle;
-  letter-spacing:.5px;
-}
-.savings-badge.revealed{opacity:1;transform:translateY(0) scale(1)}
-
-/* COUNTER */
-#counter-bar{background:var(--navy);padding:1.25rem 1.5rem;text-align:center;border-bottom:1px solid rgba(214,179,90,.15)}
-.counter-inner{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
-.counter-pulse{width:10px;height:10px;background:#22c55e;border-radius:50%;animation:pulse 1.8s infinite;flex-shrink:0}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,197,94,.5)}50%{box-shadow:0 0 0 8px rgba(34,197,94,0)}}
-.counter-text{font-size:14px;color:rgba(255,255,255,.75);line-height:1.4}
-.counter-text strong{color:#22c55e;font-size:20px;font-weight:800;margin-right:3px}
-.counter-sub{font-size:12px;color:rgba(255,255,255,.35);margin-top:2px}
-.counter-avatars{display:flex;margin-left:4px}
-.counter-avatars span{width:26px;height:26px;border-radius:50%;border:2px solid var(--navy);background:var(--gold);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--navy);margin-left:-8px;flex-shrink:0}
-.counter-avatars span:first-child{margin-left:0}
-
 </style>
 </head>
 <body>
@@ -248,32 +218,31 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 <!-- BANNER -->
 <div id="banner" role="marquee" aria-label="Annonces">
   <div class="btrack">
-    <span class="bi">🔥 Prix de lancement : 4 900 FCFA seulement</span><span class="bdot"></span>
+    <span class="bi">💰 Prix de lancement : 2 500 FCFA seulement</span><span class="bdot"></span>
     <span class="bi">⚡ Accès immédiat après paiement</span><span class="bdot"></span>
-    <span class="bi">📦 50 produits validés pour le marché africain</span><span class="bdot"></span>
+    <span class="bi">📖 Méthode terrain validée en Afrique</span><span class="bdot"></span>
     <span class="bi">🛡️ Satisfait ou remboursé sous 7 jours</span><span class="bdot"></span>
-    <span class="bi">🌍 Sénégal · Côte d'Ivoire · Cameroun</span><span class="bdot"></span>
+    <span class="bi">🌍 Sénégal · Côte d'Ivoire · Cameroun · Mali</span><span class="bdot"></span>
     <span class="bi">⏳ Offre limitée — le prix augmente bientôt</span><span class="bdot"></span>
-    <span class="bi">🔥 Prix de lancement : 4 900 FCFA seulement</span><span class="bdot"></span>
+    <span class="bi">💰 Prix de lancement : 2 500 FCFA seulement</span><span class="bdot"></span>
     <span class="bi">⚡ Accès immédiat après paiement</span><span class="bdot"></span>
-    <span class="bi">📦 50 produits validés pour le marché africain</span><span class="bdot"></span>
+    <span class="bi">📖 Méthode terrain validée en Afrique</span><span class="bdot"></span>
     <span class="bi">🛡️ Satisfait ou remboursé sous 7 jours</span><span class="bdot"></span>
-    <span class="bi">🌍 Sénégal · Côte d'Ivoire · Cameroun</span><span class="bdot"></span>
+    <span class="bi">🌍 Sénégal · Côte d'Ivoire · Cameroun · Mali</span><span class="bdot"></span>
     <span class="bi">⏳ Offre limitée — le prix augmente bientôt</span><span class="bdot"></span>
   </div>
 </div>
-
 
 <!-- COUNTER BAR -->
 <div id="counter-bar">
   <div class="counter-inner">
     <span class="counter-pulse"></span>
     <div>
-      <div class="counter-text"><strong id="buyer-count">247</strong> vendeurs ont déjà téléchargé ce guide</div>
-      <div class="counter-sub">🇸🇳 Sénégal · 🇨🇮 Côte d'Ivoire · 🇨🇲 Cameroun · et plus</div>
+      <div class="counter-text"><strong id="buyer-count">183</strong> entrepreneurs ont déjà téléchargé ce guide</div>
+      <div class="counter-sub">🇸🇳 Sénégal · 🇨🇮 Côte d'Ivoire · 🇨🇲 Cameroun · 🇲🇱 Mali · et plus</div>
     </div>
     <div class="counter-avatars">
-      <span>IB</span><span>FK</span><span>MS</span><span>AT</span><span>+</span>
+      <span>OD</span><span>FK</span><span>RN</span><span>IT</span><span>+</span>
     </div>
   </div>
 </div>
@@ -282,18 +251,19 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 <section id="hero">
   <div class="wrap">
     <div class="hero-in">
-      <span class="ey ey-gold">Guide E-commerce · Été 2025</span>
+      <span class="ey ey-gold">Guide Business · Afrique Francophone</span>
       <h1 class="display hero-title">
-        Tu vends en ligne… mais tu ne sais pas<br><em>quoi vendre cet été ?</em>
+        Comment faire son
+        <em>1er Million en Afrique</em>
       </h1>
-      <p class="hero-sub">Découvre les 50 produits que les meilleurs vendeurs d'Afrique francophone utilisent pendant la saison chaude — avec la méthode pour les tester et les lancer rapidement.</p>
-      <button class="btn-gold" onclick="document.getElementById('offre').scrollIntoView({behavior:'smooth'})">Je veux mes 50 produits →</button>
-      <p style="margin-top:1rem;font-size:12px;color:rgba(255,255,255,.3)">Accès immédiat · PDF · Wave · Orange Money · Free Money</p>
+      <p class="hero-sub">La méthode terrain pour générer ta première fortune — sans diplôme, sans gros capital, sans réseau hérité. Applicable dès aujourd'hui en Afrique francophone.</p>
+      <button class="btn-gold" onclick="document.getElementById('offre').scrollIntoView({behavior:'smooth'})">Je veux l'ebook — 2 500 FCFA →</button>
+      <p style="margin-top:1rem;font-size:12px;color:rgba(255,255,255,.3)">Accès immédiat · PDF · Wave · Orange Money · Carte bancaire</p>
       <div class="hero-trust">
-        <span class="ht-item">📦 50 produits validés</span>
+        <span class="ht-item">📖 Méthode terrain africaine</span>
         <span class="ht-item">🛡️ Garanti 7 jours</span>
         <span class="ht-item">⚡ Accès instantané</span>
-        <span class="ht-item">🌍 Fait pour l'Afrique</span>
+        <span class="ht-item">🌍 5 pays couverts</span>
       </div>
     </div>
   </div>
@@ -303,18 +273,18 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 <section id="probleme">
   <div class="wrap-sm">
     <span class="ey ey-red">Le problème</span>
-    <h2 class="display reveal">Chaque été, tu regardes les autres vendre… pendant que toi, tu cherches encore.</h2>
-    <p>Tu passes des heures sur TikTok, tu scrolles des pages Alibaba, tu regardes des vidéos YouTube… et à la fin, tu ne sais toujours pas <strong>quoi tester</strong>.</p>
+    <h2 class="display reveal">Tu travailles dur. L'argent, lui, ne suit pas.</h2>
+    <p>Tu te lèves tôt, tu travailles tard. Tu essaies des choses. Et pourtant, à la fin du mois, les résultats ne sont pas là. Tu regardes des gens réussir autour de toi sans comprendre leur secret.</p>
     <div class="qblock reveal">
-      "J'avais le budget, j'avais ma boutique Shopify, j'avais même appris les Facebook Ads. Mais je perdais mes journées à chercher LE produit. L'été passait, et moi j'avais encore rien lancé."
-      <cite>— Une réalité que beaucoup de vendeurs connaissent</cite>
+      "J'avais ouvert un commerce. J'avais essayé plusieurs activités. Mais je n'arrivais pas à franchir un certain seuil. C'est en changeant de modèle — pas d'effort — que tout a changé."
+      <cite>— Mbagnick Seck, fondateur de Blinky Digital</cite>
     </div>
-    <p>Ce n'est pas un manque de motivation. C'est un manque d'<strong>information fiable, adaptée à nos marchés</strong>. Les listes de produits gagnants en ligne visent l'Europe ou les USA — pas le Sénégal, pas la Côte d'Ivoire.</p>
+    <p>Ce n'est pas un manque de travail. C'est un manque de <strong>bon système, adapté à nos marchés africains</strong>. Les conseils business qu'on trouve en ligne visent l'Europe ou les USA — pas la réalité du Sénégal, pas celle de la Côte d'Ivoire.</p>
     <div class="pain-grid reveal">
-      <div class="pain-card"><span class="pi">❌</span><p class="pt">Tu commandes un produit "tendance" qui ne se vend pas parce que personne ne l'a validé pour nos marchés.</p></div>
-      <div class="pain-card"><span class="pi">❌</span><p class="pt">Tu perds du temps, de l'argent, et pire — tu perds confiance en toi et en le e-commerce.</p></div>
-      <div class="pain-card"><span class="pi">❌</span><p class="pt">D'autres font leurs premières ventes avec des produits simples que tu aurais pu vendre toi aussi.</p></div>
-      <div class="pain-card"><span class="pi">❌</span><p class="pt">L'été passe vite. Chaque semaine sans produit lancé, c'est du chiffre que tu laisses à un concurrent.</p></div>
+      <div class="pain-card"><span class="pi">❌</span><p class="pt">Tu travailles dur mais tu n'arrives pas à dépasser un certain seuil de revenus, peu importe tes efforts.</p></div>
+      <div class="pain-card"><span class="pi">❌</span><p class="pt">Tu ne sais pas par où commencer pour créer une vraie source de revenus scalable.</p></div>
+      <div class="pain-card"><span class="pi">❌</span><p class="pt">Tu as peut-être essayé le commerce physique et ça n'a pas fonctionné comme prévu.</p></div>
+      <div class="pain-card"><span class="pi">❌</span><p class="pt">Chaque mois qui passe sans système rentable, c'est du temps et de l'énergie perdus.</p></div>
     </div>
   </div>
 </section>
@@ -323,24 +293,110 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 <section id="solution">
   <div class="wrap-sm">
     <span class="ey ey-green">La solution</span>
-    <h2 class="display reveal">50 produits sélectionnés, testés et validés pour l'été africain.</h2>
-    <p>Cet ebook n'est pas une liste copiée-collée d'Internet. C'est une sélection construite à partir de <strong>données réelles du terrain</strong> — ce qui se vend au Sénégal, en Côte d'Ivoire, au Cameroun, pendant la saison chaude.</p>
+    <h2 class="display reveal">La méthode terrain pour construire ta première fortune africaine.</h2>
+    <p>Cet ebook n'est pas de la théorie copiée-collée. C'est la synthèse de ce que j'ai appris en passant du commerce physique au e-commerce — avec <strong>des chiffres réels, des modèles concrets</strong>, adaptés à nos marchés.</p>
     <div class="sol-grid reveal">
-      <div class="sol-card"><span class="se">🌡️</span><h4>Adapté à l'été africain</h4><p>Produits pensés pour les besoins réels de la chaleur africaine.</p></div>
-      <div class="sol-card"><span class="se">📦</span><h4>Compatible COD</h4><p>Chaque produit fonctionne avec le modèle cash on delivery.</p></div>
-      <div class="sol-card"><span class="se">📊</span><h4>Prix, marge & pub</h4><p>Tu sais exactement ce que ça rapporte avant de commander.</p></div>
-      <div class="sol-card"><span class="se">⚡</span><h4>Lançable cette semaine</h4><p>Lis, choisis, lance ta campagne. Sans chercher pendant des semaines.</p></div>
+      <div class="sol-card"><span class="se">🧠</span><h4>Mindset avant capital</h4><p>La transformation commence dans la tête, pas dans le portefeuille.</p></div>
+      <div class="sol-card"><span class="se">🌍</span><h4>Adapté à l'Afrique</h4><p>Chaque modèle est validé sur nos marchés — pas copié de l'Occident.</p></div>
+      <div class="sol-card"><span class="se">💸</span><h4>Démarrer avec peu</h4><p>Les 5 modèles fonctionnent avec moins de 30 000 FCFA de départ.</p></div>
+      <div class="sol-card"><span class="se">📈</span><h4>Scaler jusqu'au million</h4><p>Un framework clair pour passer de 0 à 1M FCFA/mois étape par étape.</p></div>
     </div>
     <div class="inside-box reveal">
       <h3>📖 Ce que tu trouves dans l'ebook</h3>
       <ul class="ilist">
-        <li><span class="ck">✓</span> 50 fiches produits avec prix de vente recommandé et marge estimée</li>
-        <li><span class="ck">✓</span> Guide pour sourcer chaque produit sur Alibaba ou localement</li>
-        <li><span class="ck">✓</span> Stratégie Facebook Ads par catégorie de produit</li>
-        <li><span class="ck">✓</span> Checklist "avant de lancer" pour éviter les erreurs classiques</li>
-        <li><span class="ck">✓</span> Produits adaptés au COD dominant en Afrique francophone</li>
+        <li><span class="ck">✓</span> Les 3 mensonges sur la richesse qu'on t'a racontés depuis l'enfance</li>
+        <li><span class="ck">✓</span> Les 5 modèles business qui marchent vraiment en Afrique francophone</li>
+        <li><span class="ck">✓</span> La méthode pour trouver et valider un produit gagnant en 48h</li>
+        <li><span class="ck">✓</span> Comment vendre sans stock ni capital avec le modèle COD</li>
+        <li><span class="ck">✓</span> Le framework pour scaler de 100K à 1 Million FCFA/mois</li>
         <li><span class="ck">✓</span> Accès PDF immédiat — lisible sur mobile, tablette ou ordinateur</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CHAPITRES -->
+<section id="chapitres">
+  <div class="wrap-sm">
+    <span class="ey ey-gold">Le contenu</span>
+    <h2 class="display reveal">Ce que tu vas apprendre, chapitre par chapitre</h2>
+    <div class="ch-grid reveal">
+      <div class="ch-item">
+        <div class="ch-num">01</div>
+        <div class="ch-body">
+          <h4>Changer de mindset : penser business, pas salaire</h4>
+          <p>Le tableau mindset salarié vs entrepreneur, les 4 habitudes des millionnaires africains qui avancent vraiment.</p>
+        </div>
+      </div>
+      <div class="ch-item">
+        <div class="ch-num">02</div>
+        <div class="ch-body">
+          <h4>Les 5 modèles qui marchent vraiment en Afrique</h4>
+          <p>E-commerce COD, produits digitaux, services B2B, import-export, formation. Potentiel chiffré pour chacun.</p>
+        </div>
+      </div>
+      <div class="ch-item">
+        <div class="ch-num">03</div>
+        <div class="ch-body">
+          <h4>Trouver ton premier produit ou service rentable</h4>
+          <p>Méthode en 3 étapes pour observer, valider et choisir — avant d'investir un seul franc.</p>
+        </div>
+      </div>
+      <div class="ch-item">
+        <div class="ch-num">04</div>
+        <div class="ch-body">
+          <h4>Vendre sans gros capital</h4>
+          <p>Le modèle zéro stock expliqué, budget de démarrage à 30 000 FCFA, paiements Wave et Orange Money.</p>
+        </div>
+      </div>
+      <div class="ch-item">
+        <div class="ch-num">05</div>
+        <div class="ch-body">
+          <h4>Scaler : de 100K à 1 Million FCFA/mois</h4>
+          <p>Le framework en 3 phases — valider, automatiser, diversifier — avec la règle du réinvestissement.</p>
+        </div>
+      </div>
+      <div class="ch-item">
+        <div class="ch-num">+</div>
+        <div class="ch-body">
+          <h4>Bonus — Outils, livres & prochaine étape</h4>
+          <p>Liste complète des outils gratuits, les 4 livres essentiels, et la prochaine étape avec Blinky Digital.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PREUVES / TÉMOIGNAGES -->
+<section id="preuves">
+  <div class="wrap-sm">
+    <span class="ey ey-green">Ils l'ont lu</span>
+    <h2 class="display reveal">Ce qu'ils ont obtenu après la lecture</h2>
+    <div class="testi-grid reveal">
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"J'ai lancé mon premier produit COD 10 jours après avoir lu le guide. 3 commandes dès la première semaine. Exactement ce qu'il me fallait."</p>
+        <p class="testi-author">Oumar D.</p>
+        <p class="testi-loc">Dakar, Sénégal</p>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Enfin quelqu'un qui parle de notre réalité africaine. Les conseils sont concrets, pas du tout théoriques. J'ai changé de modèle business après ce guide."</p>
+        <p class="testi-author">Fatoumata K.</p>
+        <p class="testi-loc">Abidjan, Côte d'Ivoire</p>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Le chapitre sur le mindset m'a tout changé. Je n'avais pas compris pourquoi je stagnais malgré mes efforts. Maintenant j'ai une direction claire."</p>
+        <p class="testi-author">Rodrigue N.</p>
+        <p class="testi-loc">Douala, Cameroun</p>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Le modèle zéro stock m'a convaincu de me lancer. Je doutais mais maintenant j'ai mon premier client. Pour 2 500 FCFA c'est clairement l'investissement du mois."</p>
+        <p class="testi-author">Issa T.</p>
+        <p class="testi-loc">Bamako, Mali</p>
+      </div>
     </div>
   </div>
 </section>
@@ -349,13 +405,13 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 <section id="offre">
   <div class="wrap-sm">
     <span class="ey ey-dark">L'offre</span>
-    <h2 class="display reveal">Tout ce qu'il te faut pour lancer dès cette semaine.</h2>
+    <h2 class="display reveal">Tout ce qu'il te faut pour changer de trajectoire.</h2>
     <p>Un prix de lancement, une garantie, un accès immédiat. Zéro risque.</p>
     <div class="ocard reveal">
       <div class="oci">
-        <p class="otitle">50 Produits Gagnants — Édition Été Afrique</p>
-        <p class="price-old" id="price-old">Valeur réelle : 9 900 FCFA</p>
-        <div class="price-new" id="price-new">4 900 <sub>FCFA</sub> <span class="savings-badge" id="savings-badge">– 50% OFF</span></div>
+        <p class="otitle">Comment faire son 1er Million en Afrique</p>
+        <p class="price-old" id="price-old">Valeur réelle : 5 000 FCFA</p>
+        <div class="price-new" id="price-new">2 500 <sub>FCFA</sub> <span class="savings-badge" id="savings-badge">– 50% OFF</span></div>
         <p class="price-note">Prix de lancement · Paiement unique · Aucun abonnement</p>
 
         <div class="countdown-wrap">
@@ -370,23 +426,23 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
         </div>
 
         <ul class="olist">
-          <li><span class="ock">✓</span> 50 fiches produits avec prix, marge et potentiel pub</li>
-          <li><span class="ock">✓</span> Guide sourcing Alibaba et fournisseurs locaux</li>
-          <li><span class="ock">✓</span> Stratégie Facebook Ads par catégorie</li>
-          <li><span class="ock">✓</span> Checklist anti-erreurs classiques</li>
+          <li><span class="ock">✓</span> Ebook PDF complet — 14 pages de méthode pure</li>
+          <li><span class="ock">✓</span> Les 5 modèles business validés en Afrique francophone</li>
+          <li><span class="ock">✓</span> Méthode de validation produit en 48h chrono</li>
+          <li><span class="ock">✓</span> Framework pour passer à 1 Million FCFA/mois</li>
           <li><span class="ock">✓</span> Accès PDF instantané dès confirmation du paiement</li>
           <li><span class="ock">✓</span> Mises à jour futures incluses gratuitement</li>
         </ul>
 
         <div class="urg">
           <span style="font-size:18px;flex-shrink:0">⏳</span>
-          <p><strong>Prix de lancement limité.</strong> Ce tarif à 4 900 FCFA est réservé aux premiers acheteurs. Il passera à 9 900 FCFA dès la fin de la période de lancement.</p>
+          <p><strong>Prix de lancement limité.</strong> Ce tarif à 2 500 FCFA est réservé aux premiers acheteurs. Il passera à 5 000 FCFA dès la fin de la période de lancement.</p>
         </div>
 
         <!-- Chariow Widget -->
         <div class="chariow-wrap">
           <div id="chariow-widget"
-               data-product-id="prd_wj6gni8g"
+               data-product-id="prd_zboprvzv"
                data-store-domain="gfwezhrj.mychariow.market"
                data-style="tap"
                data-border-style="rounded"
@@ -398,18 +454,18 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
           </div>
           <script>
           (function() {
-            var s = document.createElement('script');
-            s.src = 'https://js.chariowcdn.com/v1/widget.min.js';
-            s.async = true;
-            document.head.appendChild(s);
-            var l = document.createElement('link');
-            l.rel = 'stylesheet';
-            l.href = 'https://js.chariowcdn.com/v1/widget.min.css';
-            document.head.appendChild(l);
+            var script = document.createElement('script');
+            script.src = 'https://js.chariowcdn.com/v1/widget.min.js';
+            script.async = true;
+            document.head.appendChild(script);
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
+            document.head.appendChild(link);
           })();
           </script>
         </div>
-        <p class="pnote">Paiement sécurisé · Wave · Orange Money · Free Money</p>
+        <p class="pnote">Paiement sécurisé · Wave · Orange Money · Carte bancaire</p>
       </div>
     </div>
     <div class="gbar reveal">
@@ -426,23 +482,27 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
     <h2 class="display reveal">Tu as des questions ?</h2>
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">Comment je reçois l'ebook après le paiement ? <span class="arrow">+</span></button>
-      <div class="faq-a">Dès que ton paiement est confirmé via Wave, Orange Money ou Free Money, tu reçois un lien de téléchargement immédiatement. Le PDF est accessible sur mobile, tablette ou ordinateur.</div>
+      <div class="faq-a">Dès que ton paiement est confirmé via Wave, Orange Money ou carte bancaire, tu reçois un lien de téléchargement immédiatement. Le PDF est accessible sur mobile, tablette ou ordinateur.</div>
     </div>
     <div class="faq-item reveal">
-      <button class="faq-q" onclick="toggleFaq(this)">Ces produits marchent vraiment au Sénégal ? <span class="arrow">+</span></button>
-      <div class="faq-a">Oui. Chaque produit a été sélectionné en tenant compte des spécificités du marché sénégalais et d'Afrique francophone : pouvoir d'achat, tendances locales, compatibilité COD, et facilité de sourcing.</div>
+      <button class="faq-q" onclick="toggleFaq(this)">C'est pour quel niveau — débutant ou avancé ? <span class="arrow">+</span></button>
+      <div class="faq-a">Les deux. Cet ebook est fait pour les débutants complets comme pour ceux qui ont déjà essayé et n'ont pas encore trouvé le bon modèle. Pas de jargon, pas de théorie creuse — uniquement ce qui marche sur le terrain.</div>
     </div>
     <div class="faq-item reveal">
-      <button class="faq-q" onclick="toggleFaq(this)">J'ai déjà une boutique Shopify, est-ce que ça m'aide ? <span class="arrow">+</span></button>
-      <div class="faq-a">Absolument. L'ebook est fait pour les vendeurs qui ont déjà leur boutique mais ne savent pas quoi vendre. Tu trouves les produits, les prix recommandés, les marges estimées, et les conseils pour lancer tes premières campagnes Facebook Ads.</div>
+      <button class="faq-q" onclick="toggleFaq(this)">Est-ce que ça marche dans mon pays ? <span class="arrow">+</span></button>
+      <div class="faq-a">Oui. Le guide couvre les modèles validés au Sénégal, en Côte d'Ivoire, au Cameroun, au Mali et au Burkina Faso. Les principes s'appliquent à toute l'Afrique francophone.</div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" onclick="toggleFaq(this)">Je peux payer avec Wave ou Orange Money ? <span class="arrow">+</span></button>
+      <div class="faq-a">Oui. On accepte Wave, Orange Money et carte bancaire. Le paiement est simple et sécurisé. Tu reçois l'accès immédiatement après confirmation.</div>
     </div>
     <div class="faq-item reveal">
       <button class="faq-q" onclick="toggleFaq(this)">Et si je ne suis pas satisfait ? <span class="arrow">+</span></button>
       <div class="faq-a">Tu as 7 jours pour lire l'ebook. Si tu estimes qu'il ne vaut pas son prix, contacte-moi sur WhatsApp au +221 77 104 02 33 et je te rembourse dans les 24h, sans question.</div>
     </div>
     <div class="faq-item reveal">
-      <button class="faq-q" onclick="toggleFaq(this)">C'est quoi le modèle COD ? <span class="arrow">+</span></button>
-      <div class="faq-a">COD signifie "Cash On Delivery" (paiement à la livraison). C'est le modèle dominant en Afrique francophone où le client paie en espèces quand il reçoit sa commande. Tous les produits de l'ebook sont sélectionnés pour fonctionner avec ce modèle.</div>
+      <button class="faq-q" onclick="toggleFaq(this)">C'est quoi la différence avec tes autres guides ? <span class="arrow">+</span></button>
+      <div class="faq-a">Ce guide ne parle pas de produits à vendre — il te donne la méthode globale pour construire une activité rentable de zéro. C'est le point de départ avant tout le reste.</div>
     </div>
   </div>
 </section>
@@ -450,15 +510,15 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 <!-- CTA FINAL -->
 <section id="cta-final">
   <div class="wrap-sm">
-    <h2 class="display">L'été avance vite.<br>Tes concurrents, aussi.</h2>
-    <p>Chaque jour sans produit à vendre, c'est du chiffre que tu laisses à quelqu'un d'autre. La liste est prête. Il ne te reste qu'à la prendre.</p>
-    <button class="btn-dark" onclick="openChariow()">Oui, je veux mes 50 produits →</button>
-    <span class="cta-sub">Accès immédiat · 4 900 FCFA · Wave · Orange Money</span>
+    <h2 class="display">Le million commence<br>par une décision.</h2>
+    <p>Pour 2 500 FCFA — le prix d'un repas — tu accèdes à la méthode qui peut changer ta trajectoire. Arrête de regarder les autres avancer pendant que tu cherches encore.</p>
+    <button class="btn-dark" onclick="openChariow()">Je veux changer ma trajectoire →</button>
+    <span class="cta-sub">Accès immédiat · 2 500 FCFA · Wave · Orange Money · Carte</span>
     <div class="author-block">
       <div class="av">MS</div>
       <div class="ai">
         <h4>Mbagnick Seck</h4>
-        <p>E-commerçant COD au Sénégal · Fondateur de Dakar Trend · Créateur de contenu e-commerce pour l'Afrique francophone</p>
+        <p>E-commerçant COD au Sénégal · Fondateur de Dakar Trend & Blinky Digital · Créateur de contenu e-commerce pour l'Afrique francophone</p>
       </div>
     </div>
   </div>
@@ -472,8 +532,8 @@ footer a{color:rgba(255,255,255,.45);text-decoration:underline}
 
 <!-- STICKY BAR -->
 <div id="sbar">
-  <p><strong>50 Produits Gagnants</strong> — Édition Été Afrique</p>
-  <button onclick="openChariow()" class="btn-gold" style="padding:11px 24px;font-size:14px;border:none">4 900 FCFA →</button>
+  <p><strong>1er Million en Afrique</strong> — Ebook PDF</p>
+  <button onclick="openChariow()" class="btn-gold" style="padding:11px 24px;font-size:14px;border:none">2 500 FCFA →</button>
 </div>
 
 <!-- WHATSAPP FLOAT -->
@@ -515,7 +575,7 @@ function toggleFaq(btn){
 
 // Countdown 48h
 (function(){
-  var key = 'cd_end_v2';
+  var key = 'cd_million_v1';
   var end = parseInt(localStorage.getItem(key)||'0');
   if(!end||end<Date.now()){end=Date.now()+48*3600*1000;localStorage.setItem(key,end);}
   function tick(){
@@ -531,24 +591,18 @@ function toggleFaq(btn){
   tick();
 })();
 
-
-
 // Price strike animation on scroll into view
 (function(){
   var priceOld = document.getElementById('price-old');
   var priceNew = document.getElementById('price-new');
   var badge = document.getElementById('savings-badge');
   if(!priceOld) return;
-
   var triggered = false;
   var obs = new IntersectionObserver(function(entries){
     if(entries[0].isIntersecting && !triggered){
       triggered = true;
-      // Step 1: strike through old price
       setTimeout(function(){ priceOld.classList.add('struck'); }, 200);
-      // Step 2: reveal new price
       setTimeout(function(){ priceNew.classList.add('revealed'); }, 700);
-      // Step 3: pop in savings badge
       setTimeout(function(){ badge.classList.add('revealed'); }, 1300);
       obs.unobserve(priceOld);
     }
@@ -558,19 +612,15 @@ function toggleFaq(btn){
 
 // Dynamic buyer counter
 (function(){
-  var base = 247;
+  var base = 183;
   var el = document.getElementById('buyer-count');
   if(!el) return;
-
-  // Animate count up on load
-  var current = base - 18;
+  var current = base - 15;
   var interval = setInterval(function(){
     if(current >= base){ clearInterval(interval); return; }
     current++;
     el.textContent = current;
-  }, 80);
-
-  // Random increment every 2-5 min
+  }, 90);
   function randomIncrement(){
     var delay = (Math.random() * 180 + 120) * 1000;
     setTimeout(function(){
