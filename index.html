@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Masterclass E-commerce · 5 & 6 décembre — Blinky Academy</title>
-<meta name="description" content="Masterclass E-commerce Blinky Academy, samedi 5 et dimanche 6 décembre 2026. 2 jours pour lancer une boutique en ligne qui vend au Sénégal : produit, boutique, publicité, livraison. Places limitées, inscription sur WhatsApp.">
-<meta property="og:title" content="Masterclass E-commerce · 5 & 6 décembre — Blinky Academy">
-<meta property="og:description" content="2 jours pour lancer ta boutique en ligne qui vend au Sénégal. Apprends. Applique. Évolue. Places limitées.">
+<title>Formation Digitale · 5 &amp; 6 décembre — Blinky Academy</title>
+<meta name="description" content="Formation Digitale Blinky Academy, 5 et 6 décembre 2026, 100 % en ligne et en direct. Vends en ligne, apprends des compétences digitales et monétise ton savoir. 30 000 FCFA ou 500 DH. 10 places.">
+<meta property="og:title" content="Formation Digitale · 5 &amp; 6 décembre — Blinky Academy">
+<meta property="og:description" content="2 jours intensifs, 100 % en ligne : vends en ligne, apprends des compétences digitales et monétise ton savoir. 10 places.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://blinky.digital/logo-blinky-academy.png">
+<meta property="og:image" content="https://blinky.digital/affiche-formation-digitale.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
@@ -428,6 +428,16 @@ a.btn-gold,a.btn-dark{text-align:center}
 .mc-price .price-note{font-size:12px;color:rgba(255,255,255,.45);margin:0}
 .mc-copy{margin-top:1.5rem;font-size:12px;color:rgba(255,255,255,.3)}
 #mc{padding-bottom:6rem}
+.mc-day li div{flex:1}
+.mc-day li b{color:#fff;font-weight:700}
+.mc-result{margin-top:.9rem;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.3);border-radius:10px;padding:.7rem .85rem;font-size:13px;color:rgba(255,255,255,.85);line-height:1.5}
+.mc-result b{color:var(--mc-gold)}
+.mc-tarifs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:.9rem 0 .2rem}
+.mc-tarifs div{background:rgba(255,255,255,.04);border:1px solid rgba(212,175,55,.3);border-radius:12px;padding:.8rem .9rem}
+.mc-tarifs span{display:block;font-size:12px;color:rgba(255,255,255,.6);font-weight:600}
+.mc-tarifs b{display:block;font-size:clamp(17px,5vw,22px);white-space:nowrap;color:var(--mc-gold);font-weight:800;margin-top:2px}
+#mcPrice{display:none}
+#mcPriceNote{margin-top:.2rem}
 #sbar.mc-sbar{background:#0a0a0a;border-top:1px solid rgba(212,175,55,.3)}
 @media(max-width:560px){.btn-wa{padding:16px 22px;font-size:15px;width:100%}.mc-date{min-width:0;flex:1}.mc-cd .cd-u b{width:50px;font-size:21px}}
 </style>
@@ -435,21 +445,23 @@ a.btn-gold,a.btn-dark{text-align:center}
 <body>
 
 <!-- BARRE URGENCE -->
-<div id="urgbar" class="mc-bar">🎓 <a href="#mc">Masterclass E-commerce · 5 &amp; 6 décembre</a> — commence dans <span class="ub-time"><b data-mc="d">00</b>j <b data-mc="h">00</b>h <b data-mc="m">00</b>m <b data-mc="s">00</b>s</span></div>
+<div id="urgbar" class="mc-bar">🎓 <a href="#mc">Formation Digitale · 5 &amp; 6 décembre · 100 % en ligne</a> — commence dans <span class="ub-time"><b data-mc="d">00</b>j <b data-mc="h">00</b>h <b data-mc="m">00</b>m <b data-mc="s">00</b>s</span></div>
 
 <!-- BANNER -->
 <div id="banner" role="marquee" aria-label="Annonces">
   <div class="btrack">
-    <span class="bi">🎓 Masterclass E-commerce · 5 &amp; 6 décembre</span><span class="bdot"></span>
-    <span class="bi">🛒 2 jours pour lancer ta boutique qui vend</span><span class="bdot"></span>
-    <span class="bi">📲 Inscription sur WhatsApp</span><span class="bdot"></span>
-    <span class="bi">🔥 Places limitées</span><span class="bdot"></span>
-    <span class="bi">🇸🇳 Pensé pour le Sénégal et l'Afrique francophone</span><span class="bdot"></span>
-    <span class="bi">🎓 Masterclass E-commerce · 5 &amp; 6 décembre</span><span class="bdot"></span>
-    <span class="bi">🛒 2 jours pour lancer ta boutique qui vend</span><span class="bdot"></span>
-    <span class="bi">📲 Inscription sur WhatsApp</span><span class="bdot"></span>
-    <span class="bi">🔥 Places limitées</span><span class="bdot"></span>
-    <span class="bi">🇸🇳 Pensé pour le Sénégal et l'Afrique francophone</span><span class="bdot"></span>
+    <span class="bi">🎓 Formation Digitale · 5 &amp; 6 décembre 2026</span><span class="bdot"></span>
+    <span class="bi">💻 100 % en ligne, en direct</span><span class="bdot"></span>
+    <span class="bi">👥 Seulement 10 participants</span><span class="bdot"></span>
+    <span class="bi">🇸🇳 Zone CFA : 30 000 FCFA</span><span class="bdot"></span>
+    <span class="bi">🇲🇦 Maroc : 500 DH</span><span class="bdot"></span>
+    <span class="bi">🎁 Accompagnement privé 30 jours inclus</span><span class="bdot"></span>
+    <span class="bi">🎓 Formation Digitale · 5 &amp; 6 décembre 2026</span><span class="bdot"></span>
+    <span class="bi">💻 100 % en ligne, en direct</span><span class="bdot"></span>
+    <span class="bi">👥 Seulement 10 participants</span><span class="bdot"></span>
+    <span class="bi">🇸🇳 Zone CFA : 30 000 FCFA</span><span class="bdot"></span>
+    <span class="bi">🇲🇦 Maroc : 500 DH</span><span class="bdot"></span>
+    <span class="bi">🎁 Accompagnement privé 30 jours inclus</span><span class="bdot"></span>
   </div>
 </div>
 
@@ -457,105 +469,103 @@ a.btn-gold,a.btn-dark{text-align:center}
 <section id="mc">
   <div class="mc-in">
     <img class="mc-logo" src="logo-blinky-academy.png" alt="Blinky Academy — Apprends. Applique. Évolue." width="360" height="360">
-    <div class="mc-eyebrow">🎓 Blinky Academy présente</div>
-    <h1 class="display mc-title">Masterclass<em>E-commerce</em></h1>
-    <p class="mc-sub">2 jours intensifs pour lancer ta boutique en ligne et faire tes premières ventes au Sénégal : trouver le bon produit, monter ta boutique, faire de la pub qui vend et livrer sans perdre d'argent.</p>
+    <div class="mc-eyebrow">🎓 Blinky Academy · 2 jours intensifs</div>
+    <h1 class="display mc-title">Formation<em>Digitale</em></h1>
+    <p class="mc-sub">Vends en ligne, apprends des compétences digitales et <strong style="color:var(--mc-gold)">monétise ton savoir</strong>.</p>
     <div class="mc-dates">
       <div class="mc-date"><span>Samedi</span><b>5 déc.</b><span>Jour 1</span></div>
       <div class="mc-date"><span>Dimanche</span><b>6 déc.</b><span>Jour 2</span></div>
     </div>
-    <p class="mc-cd-label">⏳ La masterclass commence dans</p>
+    <p class="mc-cd-label">⏳ La formation commence dans</p>
     <div class="mc-cd">
       <div class="cd-u"><b data-mc="d">00</b><span>jours</span></div>
       <div class="cd-u"><b data-mc="h">00</b><span>heures</span></div>
       <div class="cd-u"><b data-mc="m">00</b><span>min</span></div>
       <div class="cd-u"><b data-mc="s">00</b><span>sec</span></div>
     </div>
-    <a class="btn-wa wa-link" href="#mc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 1 1 7.99 4.42zm8.02-17.45A11.32 11.32 0 0 0 12.05.75C5.8.75.72 5.83.72 12.08c0 2 .52 3.95 1.52 5.66L.62 23.25l5.65-1.48a11.3 11.3 0 0 0 5.78 1.47h.01c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.32-8.01z"/></svg> Je réserve ma place sur WhatsApp</a>
-    <p class="mc-note">Tu écris, on te répond avec le programme détaillé et les modalités.</p>
-    <span class="mc-seats">🔥 Places limitées · 60 000 FCFA</span>
+    <a class="btn-wa wa-link" href="#mc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 1 1 7.99 4.42zm8.02-17.45A11.32 11.32 0 0 0 12.05.75C5.8.75.72 5.83.72 12.08c0 2 .52 3.95 1.52 5.66L.62 23.25l5.65-1.48a11.3 11.3 0 0 0 5.78 1.47h.01c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.32-8.01z"/></svg> Inscris-toi maintenant</a>
+    <p class="mc-note">Inscription sur WhatsApp : on te répond avec les modalités.</p>
+    <span class="mc-seats">🔥 Seulement 10 participants</span>
 
     <div class="mc-info">
-      <div><small>📅 Dates</small><p>Sam. 5 &amp; dim. 6 décembre 2026</p></div>
-      <div><small>🕘 Horaires</small><p class="tbc">À confirmer</p></div>
-      <div><small>📍 Format</small><p class="tbc">En ligne ou en présentiel : à confirmer</p></div>
-      <div><small>💳 Tarif</small><p>60 000 FCFA<br><a href="#tarif" style="color:var(--mc-gold);font-size:12px">Prix dans ta devise ↓</a></p></div>
-    </div>
-
-    <div class="mc-price" id="tarif">
-      <p class="mc-price-t">💳 Tarif : 60 000 FCFA, adapté à la devise de ton pays</p>
-      <label class="mc-country" for="mcCountry">Ton pays</label>
-        <select id="mcCountry" class="mc-select">
-          <optgroup label="Afrique de l'Ouest (FCFA)">
-            <option value="Sénégal|xof" selected>🇸🇳 Sénégal</option>
-            <option value="Côte d'Ivoire|xof">🇨🇮 Côte d'Ivoire</option>
-            <option value="Mali|xof">🇲🇱 Mali</option>
-            <option value="Burkina Faso|xof">🇧🇫 Burkina Faso</option>
-            <option value="Bénin|xof">🇧🇯 Bénin</option>
-            <option value="Togo|xof">🇹🇬 Togo</option>
-            <option value="Niger|xof">🇳🇪 Niger</option>
-            <option value="Guinée-Bissau|xof">🇬🇼 Guinée-Bissau</option>
-          </optgroup>
-          <optgroup label="Afrique centrale (FCFA)">
-            <option value="Cameroun|xaf">🇨🇲 Cameroun</option>
-            <option value="Gabon|xaf">🇬🇦 Gabon</option>
-            <option value="Congo|xaf">🇨🇬 Congo</option>
-            <option value="Tchad|xaf">🇹🇩 Tchad</option>
-            <option value="Centrafrique|xaf">🇨🇫 Centrafrique</option>
-            <option value="Guinée équatoriale|xaf">🇬🇶 Guinée équatoriale</option>
-          </optgroup>
-          <optgroup label="Diaspora">
-            <option value="France|eur">🇫🇷 France</option>
-            <option value="Belgique|eur">🇧🇪 Belgique</option>
-            <option value="Europe (zone euro)|eur">🇪🇺 Autre pays de la zone euro</option>
-          </optgroup>
-          <optgroup label="Autres">
-            <option value="Guinée|other">🇬🇳 Guinée</option>
-            <option value="Maroc|other">🇲🇦 Maroc</option>
-            <option value="Autre pays|other">🌍 Autre pays</option>
-          </optgroup>
-        </select>
-        <div class="price-new revealed" id="mcPrice">60 000 <sub>FCFA</sub></div>
-        <p class="price-note" id="mcPriceNote">Franc CFA (UEMOA) · Paiement de l'inscription</p>
+      <div><small>📅 Dates</small><p>5 et 6 décembre 2026</p></div>
+      <div><small>💻 Format</small><p>100 % en ligne<br>(en direct)</p></div>
+      <div><small>👥 Places</small><p>Limitées à<br>10 participants</p></div>
+      <div><small>💳 Tarif</small><p>30 000 FCFA<br>500 DH</p></div>
     </div>
 
     <div class="mc-prog">
       <div class="mc-day">
         <h3>Jour 1 · Samedi 5 décembre</h3>
-        <h4>Construire les fondations</h4>
+        <h4>Fondations &amp; mise en place</h4>
         <ul>
-          <li><span>01</span> Choisir un produit gagnant pour le marché sénégalais</li>
-          <li><span>02</span> Le tester en 48h avant d'acheter du stock</li>
-          <li><span>03</span> Trouver ses fournisseurs, en local ou en Chine</li>
-          <li><span>04</span> Calculer sa marge réelle : produit, pub, livraison, retours</li>
-          <li><span>05</span> Monter une boutique simple qui inspire confiance</li>
+          <li><span>01</span><div><b>Le digital : opportunités et business en Afrique</b><br>Comprendre l'écosystème digital · Les différents modèles pour gagner de l'argent</div></li>
+          <li><span>02</span><div><b>Trouver une idée rentable</b><br>Produits physiques (e-commerce) · Produits digitaux (formations, ebooks, services) · Freelance et services en ligne</div></li>
+          <li><span>03</span><div><b>Créer sa boutique en ligne</b><br>Création d'une boutique Shopify étape par étape · Configuration, design et ajout de produits</div></li>
+          <li><span>04</span><div><b>Créer du contenu qui vend</b><br>Visuels professionnels avec Canva · Vidéos courtes (TikTok, Reels, YouTube Shorts)</div></li>
         </ul>
+        <p class="mc-result">✅ <b>Résultat jour 1 :</b> tu as une boutique ou un projet digital opérationnel et du contenu prêt à publier.</p>
       </div>
       <div class="mc-day">
         <h3>Jour 2 · Dimanche 6 décembre</h3>
-        <h4>Vendre et passer à l'échelle</h4>
+        <h4>Trafic, vente &amp; monétisation</h4>
         <ul>
-          <li><span>06</span> Créer des vidéos publicitaires qui arrêtent le scroll</li>
-          <li><span>07</span> Lancer ses pubs Facebook et TikTok avec un petit budget</li>
-          <li><span>08</span> Confirmer les commandes et réussir la livraison (paiement à la livraison)</li>
-          <li><span>09</span> Lire ses chiffres et couper ce qui ne marche pas</li>
-          <li><span>10</span> Le plan d'action pour tes 30 prochains jours</li>
+          <li><span>05</span><div><b>Attirer des clients avec la publicité</b><br>Facebook &amp; Instagram Ads (Meta Ads) · Paramétrage d'une campagne étape par étape</div></li>
+          <li><span>06</span><div><b>Exploiter TikTok et YouTube</b><br>Stratégie de contenu pour vendre · Monétisation (affiliation, produits, services)</div></li>
+          <li><span>07</span><div><b>Gérer et automatiser ses ventes</b><br>Gestion des commandes et de la livraison · Outils et astuces pour gagner du temps</div></li>
+          <li><span>08</span><div><b>Monétiser ses compétences</b><br>Créer et vendre une formation ou un service digital · Construire une source de revenus durable</div></li>
         </ul>
+        <p class="mc-result">✅ <b>Résultat jour 2 :</b> tu as lancé ta première campagne, tu sais attirer des clients et monétiser tes compétences.</p>
       </div>
     </div>
 
+    <div class="mc-price" id="tarif">
+      <p class="mc-price-t">💳 Tarif selon ton pays</p>
+      <div class="mc-tarifs">
+        <div><span>🇸🇳 Sénégal / zone CFA</span><b>30 000 FCFA</b></div>
+        <div><span>🇲🇦 Maroc</span><b>500 DH</b></div>
+      </div>
+      <label class="mc-country" for="mcCountry">Choisis ton pays pour t'inscrire</label>
+      <select id="mcCountry" class="mc-select">
+        <optgroup label="Zone CFA">
+          <option value="Sénégal|cfa" selected>🇸🇳 Sénégal</option>
+          <option value="Côte d'Ivoire|cfa">🇨🇮 Côte d'Ivoire</option>
+          <option value="Mali|cfa">🇲🇱 Mali</option>
+          <option value="Burkina Faso|cfa">🇧🇫 Burkina Faso</option>
+          <option value="Bénin|cfa">🇧🇯 Bénin</option>
+          <option value="Togo|cfa">🇹🇬 Togo</option>
+          <option value="Niger|cfa">🇳🇪 Niger</option>
+          <option value="Guinée-Bissau|cfa">🇬🇼 Guinée-Bissau</option>
+          <option value="Cameroun|cfa">🇨🇲 Cameroun</option>
+          <option value="Gabon|cfa">🇬🇦 Gabon</option>
+          <option value="Congo|cfa">🇨🇬 Congo</option>
+          <option value="Tchad|cfa">🇹🇩 Tchad</option>
+        </optgroup>
+        <optgroup label="Maghreb">
+          <option value="Maroc|mad">🇲🇦 Maroc</option>
+        </optgroup>
+        <optgroup label="Autres">
+          <option value="Guinée|other">🇬🇳 Guinée</option>
+          <option value="France|other">🇫🇷 France</option>
+          <option value="Autre pays|other">🌍 Autre pays</option>
+        </optgroup>
+      </select>
+      <div class="price-new revealed" id="mcPrice">30 000 <sub>FCFA</sub></div>
+      <p class="price-note" id="mcPriceNote">Tarif zone CFA</p>
+    </div>
+
     <div class="mc-for">
-      <h3>Cette masterclass est pour toi si…</h3>
+      <h3>🎁 Inclus dans la formation</h3>
       <ul>
-        <li>✅ Tu veux lancer ton premier business en ligne</li>
-        <li>✅ Tu as déjà essayé, sans résultats réguliers</li>
-        <li>✅ Tu vends déjà sur WhatsApp ou Instagram et veux structurer</li>
-        <li>✅ Tu veux une méthode testée sur le terrain africain</li>
+        <li>✅ Supports de formation</li>
+        <li>✅ Modèles prêts à l'emploi</li>
+        <li>✅ Accompagnement privé pendant 30 jours</li>
+        <li>✅ Attestation de formation</li>
       </ul>
     </div>
 
     <div class="mc-cta2">
-      <a class="btn-wa wa-link" href="#mc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 1 1 7.99 4.42zm8.02-17.45A11.32 11.32 0 0 0 12.05.75C5.8.75.72 5.83.72 12.08c0 2 .52 3.95 1.52 5.66L.62 23.25l5.65-1.48a11.3 11.3 0 0 0 5.78 1.47h.01c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.32-8.01z"/></svg> Je réserve ma place</a>
+      <a class="btn-wa wa-link" href="#mc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 1 1 7.99 4.42zm8.02-17.45A11.32 11.32 0 0 0 12.05.75C5.8.75.72 5.83.72 12.08c0 2 .52 3.95 1.52 5.66L.62 23.25l5.65-1.48a11.3 11.3 0 0 0 5.78 1.47h.01c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.32-8.01z"/></svg> Inscris-toi maintenant</a>
     </div>
     <p class="mc-slogan">Apprends · Applique · Évolue</p>
     <p class="mc-copy">© 2026 Blinky Academy · Mbagnick Seck</p>
@@ -564,7 +574,7 @@ a.btn-gold,a.btn-dark{text-align:center}
 
 <!-- STICKY BAR -->
 <div id="sbar" class="mc-sbar">
-  <p><strong>Masterclass E-commerce</strong> <span class="price-pill">5 &amp; 6 déc.</span></p>
+  <p><strong>Formation Digitale</strong> <span class="price-pill">5 &amp; 6 déc. · 10 places</span></p>
   <a href="#mc" class="btn-wa wa-link" target="_blank" rel="noopener" style="padding:12px 22px;font-size:15px;white-space:nowrap"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 1 1 7.99 4.42zm8.02-17.45A11.32 11.32 0 0 0 12.05.75C5.8.75.72 5.83.72 12.08c0 2 .52 3.95 1.52 5.66L.62 23.25l5.65-1.48a11.3 11.3 0 0 0 5.78 1.47h.01c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.32-8.01z"/></svg> Je réserve ma place</a>
 </div>
 
@@ -600,16 +610,15 @@ function toggleFaq(btn){
 // ===== MASTERCLASS : RÉGLAGES (modifier uniquement ces lignes) =====
 // Numéro WhatsApp au format international, sans + ni espaces (ex. 221771234567). Vide = bouton inactif.
 var MC_WHATSAPP = '';
-var MC_MESSAGE = "Bonjour, je veux réserver ma place pour la Masterclass E-commerce Blinky Academy des 5 et 6 décembre. Je suis au/en : ";
+var MC_MESSAGE = "Bonjour, je veux m'inscrire à la Formation Digitale Blinky Academy des 5 et 6 décembre. Je suis au/en : ";
 // Début de la masterclass (heure de Dakar = UTC)
 var MC_DEBUT = '2026-12-05T09:00:00Z';
 (function(){
   // Prix selon la devise (60 000 FCFA ; parité fixe 1 € = 655,957 FCFA)
   var PRIX={
-    xof:['60 000','FCFA',"Franc CFA (UEMOA) · Paiement de l'inscription"],
-    xaf:['60 000','FCFA',"Franc CFA (CEMAC) · Paiement de l'inscription"],
-    eur:['92','€',"Équivalent de 60 000 FCFA en euros"],
-    other:['60 000','FCFA',"Équivalent dans ta devise : on te donne le montant exact sur WhatsApp"]
+    cfa:['30 000','FCFA','Ton tarif : 30 000 FCFA'],
+    mad:['500','DH','Ton tarif : 500 DH'],
+    other:['30 000','FCFA',"Équivalent dans ta devise : on te donne le montant exact sur WhatsApp"]
   };
   var sel=document.getElementById('mcCountry'),pr=document.getElementById('mcPrice'),pn=document.getElementById('mcPriceNote');
   function pays(){return sel?sel.value.split('|')[0]:'';}
