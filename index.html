@@ -438,6 +438,21 @@ a.btn-gold,a.btn-dark{text-align:center}
 .mc-tarifs b{display:block;font-size:clamp(17px,5vw,22px);white-space:nowrap;color:var(--mc-gold);font-weight:800;margin-top:2px}
 #mcPrice{display:none}
 #mcPriceNote{margin-top:.2rem}
+.mc-coach{margin-top:2.25rem;background:var(--mc-bg2);border:1px solid rgba(212,175,55,.3);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;text-align:left}
+@media(min-width:700px){.mc-coach{flex-direction:row}}
+.mc-coach-photo{flex-shrink:0}
+.mc-coach-photo img{display:block;width:100%;height:300px;object-fit:cover;object-position:center 25%}
+@media(min-width:700px){.mc-coach-photo{width:260px}.mc-coach-photo img{height:100%}}
+.mc-coach-body{padding:1.4rem 1.3rem}
+.mc-coach-ey{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--mc-gold);margin-bottom:.3rem}
+.mc-coach-body h3{font-size:26px;color:#fff;margin-bottom:.15rem}
+.mc-coach-role{font-size:13px;font-weight:700;color:var(--mc-gold);margin-bottom:.9rem}
+.mc-coach-body p{font-size:14px;color:rgba(255,255,255,.75);line-height:1.7;margin-bottom:.7rem}
+.mc-coach-body p b{color:#fff}
+.mc-coach-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:1rem}
+.mc-coach-stats div{background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.25);border-radius:10px;padding:.6rem .75rem}
+.mc-coach-stats b{display:block;font-size:20px;font-weight:800;color:var(--mc-gold);line-height:1.1}
+.mc-coach-stats span{font-size:11px;color:rgba(255,255,255,.55);font-weight:600}
 #sbar.mc-sbar{background:#0a0a0a;border-top:1px solid rgba(212,175,55,.3)}
 @media(max-width:560px){.btn-wa{padding:16px 22px;font-size:15px;width:100%}.mc-date{min-width:0;flex:1}.mc-cd .cd-u b{width:50px;font-size:21px}}
 </style>
@@ -516,6 +531,24 @@ a.btn-gold,a.btn-dark{text-align:center}
           <li><span>08</span><div><b>Analyse et rentabilité</b><br>Suivi des performances (CPA, CTR, ROAS) · Plan d'action sur 30 jours pour scaler tes ventes</div></li>
         </ul>
         <p class="mc-result">✅ <b>Résultat jour 2 :</b> ta première campagne est configurée et tu sais gérer, suivre et rentabiliser tes ventes.</p>
+      </div>
+    </div>
+
+    <div class="mc-coach" id="formateur">
+      <div class="mc-coach-photo"><img src="mbagnick-seck.jpg" alt="Mbagnick Seck, fondateur de Blinky Academy" width="500" height="888" loading="lazy"></div>
+      <div class="mc-coach-body">
+        <span class="mc-coach-ey">Ton formateur</span>
+        <h3 class="display">Mbagnick Seck</h3>
+        <p class="mc-coach-role">Fondateur de Blinky Academy · E-commerçant &amp; entrepreneur digital</p>
+        <p>Je suis e-commerçant et entrepreneur digital. Aujourd'hui, avec mon équipe, nous vendons en ligne au <b>Sénégal</b> et au <b>Maroc</b>.</p>
+        <p>Avant le e-commerce, j'ai connu l'échec dans le commerce physique. C'est en changeant de modèle que tout a changé. Depuis, nous avons monté une vraie organisation : publicité, <b>équipe de closing</b> qui confirme chaque commande, suivi client et livraison.</p>
+        <p>J'ai créé Blinky Academy pour te transmettre exactement ce que nous appliquons sur le terrain, sans théorie inutile.</p>
+        <div class="mc-coach-stats">
+          <div><b>10,3 M</b><span>FCFA générés en 90 jours</span></div>
+          <div><b>886</b><span>commandes traitées</span></div>
+          <div><b>+5 ans</b><span>en e-commerce</span></div>
+          <div><b>2 pays</b><span>Sénégal &amp; Maroc</span></div>
+        </div>
       </div>
     </div>
 
