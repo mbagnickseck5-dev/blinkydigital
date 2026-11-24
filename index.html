@@ -649,7 +649,7 @@ function toggleFaq(btn){
 // Numéro WhatsApp au format international, sans + ni espaces (ex. 221771234567). Vide = bouton inactif.
 var MC_WHATSAPP = '221771040233';
 // Lien de paiement SaaSPay (un seul lien pour toutes les régions). Vide = les boutons ouvrent WhatsApp.
-var MC_PAIEMENT = '';
+var MC_PAIEMENT = 'https://link.saspay.me/ewqzm_mtrp4';
 var MC_MESSAGE = "Bonjour, je veux m'inscrire à la Formation E-commerce Afrique Blinky Academy des 5 et 6 décembre. Je suis au/en : ";
 // Début de la masterclass (heure de Dakar = UTC)
 var MC_DEBUT = '2026-12-05T09:00:00Z';
@@ -658,7 +658,7 @@ var MC_DEBUT = '2026-12-05T09:00:00Z';
   var PRIX={
     cfa:['60 000','FCFA','Ton tarif : 60 000 FCFA'],
     mad:['1 000','DH','Ton tarif : 1 000 DH'],
-    other:['60 000','FCFA',"Équivalent dans ta devise : on te donne le montant exact sur WhatsApp"]
+    other:['60 000','FCFA',"Équivalent dans ta devise, réglé via le lien de paiement"]
   };
   var sel=document.getElementById('mcCountry'),pr=document.getElementById('mcPrice'),pn=document.getElementById('mcPriceNote');
   function pays(){return sel?sel.value.split('|')[0]:'';}
