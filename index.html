@@ -657,9 +657,9 @@ body.pay-open{overflow:hidden}
     <div id="inscEtape2" class="insc-form" hidden>
       <p class="insc-step">Étape 2 sur 2 · Paiement</p>
       <p class="insc-ok">✅ Merci <b id="inscPrenom"></b>, ton inscription est enregistrée.</p>
-      <p class="insc-txt">Ta confirmation s'est ouverte sur WhatsApp : <b>appuie sur Envoyer</b> pour qu'on la reçoive. Ensuite, règle ta place :</p>
-      <a id="inscPayer" class="btn-wa insc-submit" href="#" target="_blank" rel="noopener">💳 Payer ma place · 60 000 FCFA</a>
-      <p class="insc-note">Utilise la même adresse e-mail sur la page de paiement. WhatsApp ne s'est pas ouvert ? <a id="inscWa" href="#" target="_blank" rel="noopener">Envoyer la confirmation</a></p>
+      <p class="insc-txt">La page de paiement SasPay s'est ouverte dans un nouvel onglet. Après le paiement, envoie-nous ta confirmation sur WhatsApp :</p>
+      <a id="inscWa" class="btn-wa insc-submit" href="#" target="_blank" rel="noopener">✅ Envoyer ma confirmation WhatsApp</a>
+      <p class="insc-note">La page de paiement ne s'est pas ouverte ? <a id="inscPayer" href="#" target="_blank" rel="noopener">Payer ma place · 60 000 FCFA</a></p>
     </div>
   </div>
 </div>
@@ -745,17 +745,19 @@ var MC_DEBUT = '2026-12-05T09:00:00Z';
     var d=new FormData(fo),paysNom=String(d.get('pays')||'').split('|')[0];
     // Enregistrement (Netlify Forms)
     var corps=new URLSearchParams();d.forEach(function(v,k){corps.append(k,k==='pays'?paysNom:v);});
-    try{fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:corps.toString()}).catch(function(){});}catch(_){}
+    try{fetch('/',{method:'POST',keepalive:true,headers:{'Content-Type':'application/x-www-form-urlencoded'},body:corps.toString()}).catch(function(){});}catch(_){}
     // Confirmation WhatsApp vers Blinky Academy
     var msg='✅ Nouvelle inscription · Formation E-commerce Afrique (5 & 6 déc.)\n'+
       'Prénom : '+d.get('prenom')+'\nNom : '+d.get('nom')+'\nE-mail : '+d.get('email')+
-      '\nWhatsApp : '+d.get('whatsapp')+'\nPays : '+paysNom+'\nJe passe au paiement (60 000 FCFA).';
+      '\nWhatsApp : '+d.get('whatsapp')+'\nPays : '+paysNom+'\nPaiement SasPay (60 000 FCFA) effectué.';
     var wa='https://wa.me/'+MC_WHATSAPP+'?text='+encodeURIComponent(msg);
     document.getElementById('inscWa').href=wa;
     document.getElementById('inscPayer').href=MC_PAIEMENT;
     document.getElementById('inscPrenom').textContent=d.get('prenom');
     fo.hidden=true;e2.hidden=false;
-    window.open(wa,'_blank','noopener');
+    // Redirection directe vers la page de paiement SasPay
+    var w=null;try{w=window.open(MC_PAIEMENT,'_blank');if(w)w.opener=null;}catch(_){}
+    if(!w){/* onglet bloqué : on part sur SasPay dans cet onglet */ setTimeout(function(){location.href=MC_PAIEMENT;},300);}
   });
   if(MC_PAIEMENT){
     // Boutons de paiement : icône carte au lieu de WhatsApp
