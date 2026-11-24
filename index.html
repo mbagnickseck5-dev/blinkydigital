@@ -455,6 +455,17 @@ a.btn-gold,a.btn-dark{text-align:center}
 .mc-coach-stats span{font-size:11px;color:rgba(255,255,255,.55);font-weight:600}
 .wa-q{margin-top:.7rem;font-size:14px}
 .wa-q a{color:var(--mc-gold);text-decoration:underline;text-underline-offset:3px}
+.pay-modal{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.78);display:flex;align-items:center;justify-content:center;padding:12px}
+.pay-modal[hidden]{display:none}
+.pay-box{background:#0f0f0f;border:1px solid rgba(212,175,55,.4);border-radius:16px;width:100%;max-width:520px;height:min(92vh,760px);display:flex;flex-direction:column;overflow:hidden}
+.pay-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:.8rem 1rem;border-bottom:1px solid rgba(212,175,55,.25)}
+.pay-head b{display:block;color:#fff;font-size:14px}
+.pay-head span{color:var(--mc-gold);font-weight:800;font-size:18px}
+.pay-close{background:rgba(255,255,255,.08);border:0;color:#fff;width:36px;height:36px;border-radius:50%;font-size:16px;cursor:pointer}
+#payFrame{flex:1;width:100%;border:0;background:#fff}
+.pay-foot{font-size:12px;color:rgba(255,255,255,.55);padding:.6rem 1rem;text-align:center;margin:0}
+.pay-foot a{color:var(--mc-gold)}
+body.pay-open{overflow:hidden}
 #sbar.mc-sbar{background:#0a0a0a;border-top:1px solid rgba(212,175,55,.3)}
 @media(max-width:560px){.btn-wa{padding:16px 22px;font-size:15px;width:100%}.mc-date{min-width:0;flex:1}.mc-cd .cd-u b{width:50px;font-size:21px}}
 </style>
@@ -610,6 +621,17 @@ a.btn-gold,a.btn-dark{text-align:center}
   </div>
 </section>
 
+<!-- PAIEMENT INTÉGRÉ -->
+<div id="payModal" class="pay-modal" hidden>
+  <div class="pay-box" role="dialog" aria-modal="true" aria-label="Paiement de la formation">
+    <div class="pay-head">
+      <div><b>Formation E-commerce Afrique</b><span id="payAmount">60 000 FCFA</span></div>
+      <button type="button" class="pay-close" aria-label="Fermer">✕</button>
+    </div>
+    <iframe id="payFrame" title="Paiement sécurisé SasPay" allow="payment"></iframe>
+    <p class="pay-foot">🔒 Paiement sécurisé par SasPay · Le paiement ne s'affiche pas ? <a id="payNewTab" href="#" target="_blank" rel="noopener">Ouvrir le paiement</a></p>
+  </div>
+</div>
 <!-- STICKY BAR -->
 <div id="sbar" class="mc-sbar">
   <p><strong>Formation E-commerce Afrique</strong> <span class="price-pill">5 &amp; 6 déc. · 10 places</span></p>
@@ -673,6 +695,22 @@ var MC_DEBUT = '2026-12-05T09:00:00Z';
       if(wa){a.href=wa;}else{a.parentNode.style.display='none';}
     });
   }
+  // Paiement dans une fenêtre sur la page (sans quitter le site)
+  var modal=document.getElementById('payModal'),frame=document.getElementById('payFrame');
+  function prixAffiche(){if(!sel)return '60 000 FCFA';var v=PRIX[sel.value.split('|')[1]];return v[0]+' '+v[1];}
+  function ouvrirPaiement(e){
+    if(!MC_PAIEMENT)return;
+    e.preventDefault();
+    document.getElementById('payAmount').textContent=prixAffiche();
+    document.getElementById('payNewTab').href=MC_PAIEMENT;
+    if(frame.getAttribute('src')!==MC_PAIEMENT)frame.setAttribute('src',MC_PAIEMENT);
+    modal.hidden=false;document.body.classList.add('pay-open');
+  }
+  function fermer(){modal.hidden=true;document.body.classList.remove('pay-open');}
+  document.querySelectorAll('.pay-link').forEach(function(a){a.addEventListener('click',ouvrirPaiement);});
+  modal.querySelector('.pay-close').addEventListener('click',fermer);
+  modal.addEventListener('click',function(e){if(e.target===modal)fermer();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermer();});
   if(MC_PAIEMENT){
     // Boutons de paiement : icône carte au lieu de WhatsApp
     document.querySelectorAll('.pay-link svg').forEach(function(i){var e=document.createElement('span');e.textContent='💳';e.setAttribute('aria-hidden','true');i.replaceWith(e);});
