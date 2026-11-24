@@ -455,6 +455,29 @@ a.btn-gold,a.btn-dark{text-align:center}
 .mc-coach-stats span{font-size:11px;color:rgba(255,255,255,.55);font-weight:600}
 .wa-q{margin-top:.7rem;font-size:14px}
 .wa-q a{color:var(--mc-gold);text-decoration:underline;text-underline-offset:3px}
+.pay-modal{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.78);display:flex;align-items:center;justify-content:center;padding:12px;overflow-y:auto}
+.pay-modal[hidden],.insc-form[hidden]{display:none}
+.pay-box{background:#0f0f0f;border:1px solid rgba(212,175,55,.4);border-radius:16px;width:100%;max-width:480px;overflow:hidden;margin:auto}
+.pay-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:.9rem 1rem;border-bottom:1px solid rgba(212,175,55,.25)}
+.pay-head b{display:block;color:#fff;font-size:14px}
+.pay-head span{color:var(--mc-gold);font-weight:700;font-size:13px}
+.pay-close{background:rgba(255,255,255,.08);border:0;color:#fff;width:36px;height:36px;border-radius:50%;font-size:16px;cursor:pointer;flex-shrink:0}
+.insc-form{padding:1.1rem 1rem 1.2rem;display:flex;flex-direction:column;gap:.75rem;text-align:left}
+.insc-form label{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:700;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.05em}
+.insc-form input,.insc-form select{background:rgba(255,255,255,.06);border:1px solid rgba(212,175,55,.3);border-radius:10px;padding:12px 13px;color:#fff;font-size:16px;font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;font-weight:500}
+.insc-form select option{color:#111}
+.insc-form input:focus,.insc-form select:focus{outline:2px solid var(--mc-gold);outline-offset:1px}
+.insc-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.insc-row label{min-width:0}
+.insc-form input,.insc-form select{width:100%;min-width:0;box-sizing:border-box}
+.insc-hp{position:absolute;left:-9999px}
+.insc-step{font-size:12px;font-weight:800;color:var(--mc-gold);text-transform:uppercase;letter-spacing:.08em;margin:0}
+.insc-submit{width:100%;margin-top:.3rem;border:0;cursor:pointer;font-family:'Inter',sans-serif}
+.insc-note{font-size:12px;color:rgba(255,255,255,.45);text-align:center;margin:0}
+.insc-note a{color:var(--mc-gold)}
+.insc-ok{font-size:16px;color:#fff;margin:0}
+.insc-txt{font-size:14px;color:rgba(255,255,255,.75);line-height:1.6;margin:0}
+body.pay-open{overflow:hidden}
 #sbar.mc-sbar{background:#0a0a0a;border-top:1px solid rgba(212,175,55,.3)}
 @media(max-width:560px){.btn-wa{padding:16px 22px;font-size:15px;width:100%}.mc-date{min-width:0;flex:1}.mc-cd .cd-u b{width:50px;font-size:21px}}
 </style>
@@ -502,7 +525,7 @@ a.btn-gold,a.btn-dark{text-align:center}
     </div>
     <a class="btn-wa wa-link pay-link" href="#mc" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.43 9.43 0 1 1 7.99 4.42zm8.02-17.45A11.32 11.32 0 0 0 12.05.75C5.8.75.72 5.83.72 12.08c0 2 .52 3.95 1.52 5.66L.62 23.25l5.65-1.48a11.3 11.3 0 0 0 5.78 1.47h.01c6.25 0 11.33-5.08 11.33-11.33 0-3.03-1.18-5.87-3.32-8.01z"/></svg> Inscris-toi maintenant</a>
     <p class="wa-q"><a class="wa-only" href="#mc" target="_blank" rel="noopener">💬 Une question ? Écris-nous sur WhatsApp</a></p>
-    <p class="mc-note">Inscription sur WhatsApp : on te répond avec les modalités.</p>
+    <p class="mc-note">Remplis le formulaire, puis passe au paiement sécurisé.</p>
     <span class="mc-seats">🔥 Seulement 10 participants</span>
 
     <div class="mc-info">
@@ -610,6 +633,36 @@ a.btn-gold,a.btn-dark{text-align:center}
   </div>
 </section>
 
+<!-- FORMULAIRE D'INSCRIPTION -->
+<div id="inscModal" class="pay-modal" hidden>
+  <div class="pay-box insc-box" role="dialog" aria-modal="true" aria-labelledby="inscTitre">
+    <div class="pay-head">
+      <div><b id="inscTitre">Inscription · Formation E-commerce Afrique</b><span>5 &amp; 6 décembre · 60 000 FCFA</span></div>
+      <button type="button" class="pay-close" aria-label="Fermer">✕</button>
+    </div>
+    <form id="inscForm" name="inscription" method="POST" data-netlify="true" netlify-honeypot="site-web" class="insc-form">
+      <input type="hidden" name="form-name" value="inscription">
+      <p class="insc-hp"><label>Ne pas remplir <input name="site-web"></label></p>
+      <p class="insc-step">Étape 1 sur 2 · Tes informations</p>
+      <div class="insc-row">
+        <label>Prénom<input name="prenom" required autocomplete="given-name"></label>
+        <label>Nom<input name="nom" required autocomplete="family-name"></label>
+      </div>
+      <label>Adresse e-mail<input name="email" type="email" required autocomplete="email"></label>
+      <label>Numéro WhatsApp<input name="whatsapp" type="tel" required autocomplete="tel" placeholder="+221 77 000 00 00"></label>
+      <label>Pays<select name="pays" id="inscPays"></select></label>
+      <button type="submit" class="btn-wa insc-submit">Continuer vers le paiement →</button>
+      <p class="insc-note">🔒 Tes informations servent uniquement à ton inscription.</p>
+    </form>
+    <div id="inscEtape2" class="insc-form" hidden>
+      <p class="insc-step">Étape 2 sur 2 · Paiement</p>
+      <p class="insc-ok">✅ Merci <b id="inscPrenom"></b>, ton inscription est enregistrée.</p>
+      <p class="insc-txt">Ta confirmation s'est ouverte sur WhatsApp : <b>appuie sur Envoyer</b> pour qu'on la reçoive. Ensuite, règle ta place :</p>
+      <a id="inscPayer" class="btn-wa insc-submit" href="#" target="_blank" rel="noopener">💳 Payer ma place · 60 000 FCFA</a>
+      <p class="insc-note">Utilise la même adresse e-mail sur la page de paiement. WhatsApp ne s'est pas ouvert ? <a id="inscWa" href="#" target="_blank" rel="noopener">Envoyer la confirmation</a></p>
+    </div>
+  </div>
+</div>
 <!-- STICKY BAR -->
 <div id="sbar" class="mc-sbar">
   <p><strong>Formation E-commerce Afrique</strong> <span class="price-pill">5 &amp; 6 déc. · 10 places</span></p>
@@ -673,10 +726,41 @@ var MC_DEBUT = '2026-12-05T09:00:00Z';
       if(wa){a.href=wa;}else{a.parentNode.style.display='none';}
     });
   }
+  // Formulaire d'inscription avant le paiement
+  var im=document.getElementById('inscModal'),fo=document.getElementById('inscForm'),e2=document.getElementById('inscEtape2'),ip=document.getElementById('inscPays');
+  if(sel&&ip){ip.innerHTML=sel.innerHTML;}
+  function ouvrirInsc(e){
+    e.preventDefault();
+    if(sel&&ip)ip.value=sel.value;
+    fo.hidden=false;e2.hidden=true;im.hidden=false;document.body.classList.add('pay-open');
+    setTimeout(function(){var f=fo.querySelector('input[name=prenom]');if(f)f.focus();},50);
+  }
+  function fermerInsc(){im.hidden=true;document.body.classList.remove('pay-open');}
+  document.querySelectorAll('.pay-link').forEach(function(a){a.addEventListener('click',ouvrirInsc);});
+  im.querySelector('.pay-close').addEventListener('click',fermerInsc);
+  im.addEventListener('click',function(e){if(e.target===im)fermerInsc();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fermerInsc();});
+  fo.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(fo),paysNom=String(d.get('pays')||'').split('|')[0];
+    // Enregistrement (Netlify Forms)
+    var corps=new URLSearchParams();d.forEach(function(v,k){corps.append(k,k==='pays'?paysNom:v);});
+    try{fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:corps.toString()}).catch(function(){});}catch(_){}
+    // Confirmation WhatsApp vers Blinky Academy
+    var msg='✅ Nouvelle inscription · Formation E-commerce Afrique (5 & 6 déc.)\n'+
+      'Prénom : '+d.get('prenom')+'\nNom : '+d.get('nom')+'\nE-mail : '+d.get('email')+
+      '\nWhatsApp : '+d.get('whatsapp')+'\nPays : '+paysNom+'\nJe passe au paiement (60 000 FCFA).';
+    var wa='https://wa.me/'+MC_WHATSAPP+'?text='+encodeURIComponent(msg);
+    document.getElementById('inscWa').href=wa;
+    document.getElementById('inscPayer').href=MC_PAIEMENT;
+    document.getElementById('inscPrenom').textContent=d.get('prenom');
+    fo.hidden=true;e2.hidden=false;
+    window.open(wa,'_blank','noopener');
+  });
   if(MC_PAIEMENT){
     // Boutons de paiement : icône carte au lieu de WhatsApp
     document.querySelectorAll('.pay-link svg').forEach(function(i){var e=document.createElement('span');e.textContent='💳';e.setAttribute('aria-hidden','true');i.replaceWith(e);});
-    document.querySelectorAll('.mc-note').forEach(function(n){n.textContent='Paiement sécurisé en ligne. Une question avant de payer ? Écris-nous sur WhatsApp.';});
+    document.querySelectorAll('.mc-note').forEach(function(n){n.textContent='Remplis le formulaire, puis passe au paiement sécurisé.';});
   } else {
     document.querySelectorAll('.wa-q').forEach(function(n){n.style.display='none';});
   }
